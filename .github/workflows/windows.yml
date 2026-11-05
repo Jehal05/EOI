@@ -8,6 +8,9 @@ on:
     paths: ['tools/stack.py', 'tools/gs_client.py', 'windows/**', '.github/workflows/windows.yml']
 permissions:
   contents: write
+concurrency:
+  group: windows-bundle
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: windows-latest
@@ -44,13 +47,16 @@ jobs:
         env:
           PYTHONUTF8: '1'
         run: |
-          python tools/stack.py up
-          sleep 25
-          python tools/stack.py status
-          python tools/stack.py code alice
-          python tools/e2e_core.py
-          python tools/stack.py trip
-          python tools/stack.py down
+          mkdir -p logs
+          {
+            python tools/stack.py up
+            sleep 25
+            python tools/stack.py status
+            python tools/stack.py code alice
+            python tools/e2e_core.py
+            python tools/stack.py trip
+            python tools/stack.py down
+          } 2>&1 | tee logs/smoke.txt
       - name: Stop stack if still running
         if: always()
         run: python tools/stack.py down || true
@@ -58,6 +64,7 @@ jobs:
         if: always()
         run: |
           mkdir -p logs && cp "$TEMP"/gs/*.log logs/ 2>/dev/null || true
+          ls -l logs
       - uses: actions/upload-artifact@v4
         if: always()
         with: { name: windows-logs, path: logs }
@@ -82,6 +89,13 @@ jobs:
         run: |
           gh release delete windows-demo -y --cleanup-tag || true
           gh release create windows-demo GridSovereign-windows.zip --title "Windows demo bundle" --notes "Built on a Windows runner. Smoke test result: ${{ steps.smoke.outcome }}. Read WINDOWS.md inside the zip."
+      - name: Attach logs to the release
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          7z a -tzip windows-logs.zip logs > /dev/null
+          gh release upload windows-demo windows-logs.zip --clobber || true
       - name: Fail if the smoke test failed
         if: steps.smoke.outcome != 'success'
         run: exit 1
