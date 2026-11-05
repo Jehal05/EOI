@@ -98,6 +98,43 @@ def down():
     time.sleep(1)
 
 
+def java_major(java):
+    try:
+        out = subprocess.run([java, "-version"], capture_output=True, text=True, env=dict(os.environ, JAVA_TOOL_OPTIONS="")).stderr
+        import re
+        m = re.search(r'version "(\d+)', out)
+        return int(m.group(1)) if m else 0
+    except OSError:
+        return 0
+
+
+def find_java():
+    """Java 21 or newer: JAVA_HOME, then the usual Windows install folders, then PATH."""
+    cands = []
+    jh = os.environ.get("JAVA_HOME")
+    if jh:
+        cands.append(J(jh, "bin", "java" + EXE))
+    if WIN:
+        import glob
+        for pat in (r"C:\Program Files\Eclipse Adoptium\jdk-*", r"C:\Program Files\Java\jdk-*", r"C:\Program Files\Microsoft\jdk-*",
+                    r"C:\Program Files\Amazon Corretto\jdk*", r"C:\Program Files\Zulu\zulu*"):
+            for d in sorted(glob.glob(pat), reverse=True):
+                cands.append(J(d, "bin", "java.exe"))
+    w = shutil.which("java")
+    if w:
+        cands.append(w)
+    seen = []
+    for c in cands:
+        if os.path.exists(c) and c not in seen:
+            seen.append(c)
+            if java_major(c) >= 21:
+                say("using Java at " + c)
+                return c
+    say("Java 21 or newer was not found. Found: " + (", ".join("%s (Java %d)" % (c, java_major(c)) for c in seen) or "none"))
+    say("Install Temurin 21 from https://adoptium.net and run this again.")
+    sys.exit(1)
+
+
 def need(path, what):
     if not os.path.exists(path):
         say("missing %s: %s" % (what, path))
@@ -106,10 +143,7 @@ def need(path, what):
 
 def up():
     os.makedirs(D, exist_ok=True)
-    java = shutil.which("java")
-    if not java:
-        say("Java was not found. Install Java 21 or newer and open a new terminal.")
-        sys.exit(1)
+    java = find_java()
     need(CIM, "model service (cim-pds)")
     need(J(FEPDIR, "bin", "fep" + EXE), "field gateway")
     need(J(FEPDIR, "bin", "outstation-sim" + EXE), "outstation simulator")
