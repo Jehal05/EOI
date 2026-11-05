@@ -151,3 +151,10 @@ Soak limits: nothing here ran for 7 days. The harness was exercised for 8 minute
 - Snapshots are kept for the last 500 versions; a proposal whose base version has aged out cannot be merged (reported as such).
 - The change list in the UI shows the first 60 field changes; the API returns all.
 - One cim-pds process holds the models; models and proposals are not replicated across nodes (item 19/20).
+
+
+## Windows support (added after item 22)
+- `tools/stack.py` is a portable launcher (Windows, Linux, macOS) for the default two-node stack, with a Windows guide in `docs/WINDOWS.md`.
+- The Windows build is produced by `.github/workflows/windows.yml` on a Windows runner, which runs one end-to-end suite (`e2e_core`). Every other suite, all benchmarks and the 28-suite conformance run were done on Linux only.
+- Not available on Windows: TLS, DNP3, IEC 101, quorum, mTLS, PostgreSQL, Redis and PMU modes (they are in `tools/stack.sh`, which is bash).
+- Not tested on a physical Windows laptop by the author.

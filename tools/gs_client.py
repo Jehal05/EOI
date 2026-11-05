@@ -1,7 +1,8 @@
 """Tiny client helpers shared by the e2e/benchmark scripts (stdlib + httpx)."""
-import base64, hashlib, hmac, struct, time, httpx
+import base64, hashlib, hmac, os, struct, time, httpx
 
-CREDS = "/tmp/gs/coreA/dev-credentials.txt"
+GS_DIR = os.environ.get("GS_DIR") or (os.path.join(os.environ.get("TEMP", "."), "gs") if os.name == "nt" else "/tmp/gs")
+CREDS = os.path.join(GS_DIR, "coreA", "dev-credentials.txt")
 A, B = "http://127.0.0.1:8083", "http://127.0.0.1:8183"
 
 

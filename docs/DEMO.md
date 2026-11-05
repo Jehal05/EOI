@@ -7,7 +7,7 @@ Everything below runs on synthetic or public IEEE data. Nothing is connected to 
 ## A. Operations (12 min)
 1. **Login with MFA** (alice). Wrong password; lockout after 5 failures.
 2. **Grid map**: 118 buses, 186 branches, loading colours, leader/standby and link state in the header. Switch the three themes and EN/Hindi: severity is always shape plus colour.
-3. **Incident**: `curl -XPOST :8091/event -d '{"trip":["BRK-BR0030-F","BRK-BR0030-T"]}'`. Alarm banner, ISA-18.2 first-out versus consequential grouping, acknowledge (A / Shift+A), shelve with a reason.
+3. **Incident**: `curl -XPOST localhost:8091/event -H 'Content-Type: application/json' -d '{"trip":["BRK-BR0030-F","BRK-BR0030-T"]}'`. Alarm banner, ISA-18.2 first-out versus consequential grouping, acknowledge (A / Shift+A), shelve with a reason.
 4. **Single-line diagram** (SS-0010): select-before-operate with MFA and reason. Show the interlock refusal, a viewer's 403 and a jurisdiction refusal (`north` on a Western substation).
 5. **Communications loss**: stop the outstation; points go stale at once, the substation shows lost, the command is blocked; restart and watch recovery (Log and handover, Alarms).
 6. **Log and handover**: write a log entry, amend it, create a shift handover with its alarm snapshot.

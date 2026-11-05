@@ -1,0 +1,87 @@
+name: windows-bundle
+# Builds every component on a real Windows machine, starts the stack, runs one end-to-end suite,
+# and publishes a ready-to-run zip as the "windows-demo" release.
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ['tools/stack.py', 'tools/gs_client.py', 'windows/**', '.github/workflows/windows.yml']
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '21' }
+      - uses: actions/setup-go@v5
+        with: { go-version: '1.24' }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Build model service (Rust)
+        run: cd services/cim-pds && cargo build --release
+      - name: Build field gateway and simulators (Go)
+        run: |
+          cd services/fep-gateway && mkdir -p bin
+          for c in fep outstation-sim pmu-sim pki mtlsproxy; do go build -o bin/$c.exe ./cmd/$c; done
+      - name: Build SCADA core (Java)
+        run: |
+          cd services/scada-core && rm -rf out && mkdir out
+          javac -d out $(find src -name '*.java')
+      - name: Build operator screen (UI)
+        run: cd ui && npm ci && npm run build
+      - name: Install Python packages
+        run: pip install -r services/ems-analytics/requirements.txt -r services/historian/requirements.txt
+      - name: Smoke test on Windows
+        id: smoke
+        continue-on-error: true
+        env:
+          PYTHONUTF8: '1'
+        run: |
+          python tools/stack.py up
+          sleep 25
+          python tools/stack.py status
+          python tools/stack.py code alice
+          python tools/e2e_core.py
+          python tools/stack.py trip
+          python tools/stack.py down
+      - name: Stop stack if still running
+        if: always()
+        run: python tools/stack.py down || true
+      - name: Collect logs
+        if: always()
+        run: |
+          mkdir -p logs && cp "$TEMP"/gs/*.log logs/ 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: windows-logs, path: logs }
+      - name: Package
+        run: |
+          B=GridSovereign-windows
+          mkdir -p $B/services/cim-pds/target/release $B/services/fep-gateway/bin $B/services/scada-core $B/services/ems-analytics $B/services/historian $B/ui
+          cp -r tools data $B/
+          find $B -name __pycache__ -type d -prune -exec rm -rf {} +
+          cp services/cim-pds/target/release/cim-pds.exe $B/services/cim-pds/target/release/
+          cp services/fep-gateway/bin/*.exe $B/services/fep-gateway/bin/
+          cp -r services/scada-core/out $B/services/scada-core/
+          cp -r services/ems-analytics/ems services/ems-analytics/requirements.txt $B/services/ems-analytics/
+          cp -r services/historian/hist services/historian/requirements.txt $B/services/historian/
+          cp -r ui/dist $B/ui/
+          cp windows/*.bat docs/WINDOWS.md $B/
+          7z a -tzip $B.zip $B > /dev/null
+          ls -l $B.zip
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete windows-demo -y --cleanup-tag || true
+          gh release create windows-demo GridSovereign-windows.zip --title "Windows demo bundle" --notes "Built on a Windows runner. Smoke test result: ${{ steps.smoke.outcome }}. Read WINDOWS.md inside the zip."
+      - name: Fail if the smoke test failed
+        if: steps.smoke.outcome != 'success'
+        run: exit 1
