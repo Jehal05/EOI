@@ -5,7 +5,7 @@ on:
   workflow_dispatch: {}
   push:
     branches: [main]
-    paths: ['tools/stack.py', 'tools/gs_client.py', 'windows/**', '.github/workflows/windows.yml']
+    paths: ['services/ems-analytics/ems/**', 'tools/stack.py', 'tools/gs_client.py', 'windows/**', '.github/workflows/windows.yml']
 permissions:
   contents: write
 concurrency:

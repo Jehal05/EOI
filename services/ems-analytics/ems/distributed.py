@@ -43,8 +43,7 @@ def eval_shard(net: Net, jobs: list[list[int]], vmin: float, vmax: float, enforc
     args = (net, base["V"], ({b: l for b, l in bo}, {b: v for b, v in bv}), vmin, vmax, enforce_q)
     ks = [tuple(j) if len(j) > 1 else int(j[0]) for j in jobs]
     if workers > 1 and len(ks) > 50:
-        import multiprocessing as mp
-        with mp.get_context("forkserver").Pool(workers, initializer=ca._init, initargs=args) as pool:
+        with ca.mp_context().Pool(workers, initializer=ca._init, initargs=args) as pool:
             res = pool.map(ca._one, ks, chunksize=max(1, len(ks) // (workers * 4)))
     else:
         ca._init(*args)

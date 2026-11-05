@@ -7,6 +7,11 @@ import multiprocessing as mp
 from .network import Net
 from . import powerflow as pf
 
+
+def mp_context():
+    """Clean worker processes: forkserver where it exists (Linux, macOS), spawn on Windows."""
+    return mp.get_context("forkserver" if "forkserver" in mp.get_all_start_methods() else "spawn")
+
 _G = {}
 
 
@@ -67,7 +72,7 @@ def run_n1(net: Net, workers: int = 1, vmin=0.95, vmax=1.05, enforce_q_limits=Fa
     if runner is not None:      # distributed evaluation: runner(list of branch-index lists) -> results in the same order
         res = runner([[k] for k in idx])
     elif workers > 1:
-        ctx = mp.get_context("forkserver")      # a forked worker inherits the parent threads' BLAS state and can deadlock
+        ctx = mp_context()      # a forked worker inherits the parent threads' BLAS state and can deadlock
         with ctx.Pool(workers, initializer=_init, initargs=args) as pool:
             res = pool.map(_one, idx, chunksize=max(1, len(idx) // (workers * 8)))
     else:

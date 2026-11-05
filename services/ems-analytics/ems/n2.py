@@ -140,7 +140,7 @@ def run_n2(net: Net, workers: int = 1, vmin=0.95, vmax=1.05, k_top: int = 40, ve
         if runner is not None:
             res = runner([list(j) for j in jobs])
         elif workers > 1 and est_s > 1.5:
-            with mp.get_context("forkserver").Pool(workers, initializer=ca._init, initargs=args) as pool:
+            with ca.mp_context().Pool(workers, initializer=ca._init, initargs=args) as pool:
                 res = pool.map(ca._one, jobs, chunksize=max(1, len(jobs) // (workers * 4)))
         else:
             ca._init(*args)
