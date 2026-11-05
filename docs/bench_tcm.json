@@ -1,0 +1,170 @@
+[
+ {
+  "buses": 118,
+  "branches": 186,
+  "n1_limit": 1.0,
+  "corridors": 4,
+  "wall_s": 0.9,
+  "atc_mw": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ac_mw": [
+   1.6,
+   2.0,
+   3.0,
+   2.0
+  ],
+  "dc_mw": [
+   1.6,
+   2.0,
+   3.0,
+   2.0
+  ],
+  "limits": [
+   "thermal_n1",
+   "thermal_n1",
+   "thermal_n1",
+   "thermal_n1"
+  ],
+  "preexisting_excluded": [
+   229,
+   229,
+   229,
+   229
+  ]
+ },
+ {
+  "buses": 118,
+  "branches": 186,
+  "n1_limit": 1.15,
+  "corridors": 4,
+  "wall_s": 2.1,
+  "atc_mw": [
+   0.0,
+   0.0,
+   0.0,
+   14.6
+  ],
+  "ac_mw": [
+   3.8,
+   1.1,
+   2.8,
+   19.4
+  ],
+  "dc_mw": [
+   10.2,
+   1.1,
+   10.0,
+   19.4
+  ],
+  "limits": [
+   "thermal_n1",
+   "thermal_n1",
+   "thermal_n1",
+   "thermal_n1"
+  ],
+  "preexisting_excluded": [
+   124,
+   124,
+   124,
+   124
+  ]
+ },
+ {
+  "buses": 1062,
+  "branches": 1698,
+  "n1_limit": 1.0,
+  "corridors": 6,
+  "wall_s": 5.1,
+  "atc_mw": [
+   0.0,
+   0.0,
+   3.7,
+   4.1,
+   5.6,
+   7.3
+  ],
+  "ac_mw": [
+   2.3,
+   14.5,
+   4.0,
+   4.5,
+   6.4,
+   8.2
+  ],
+  "dc_mw": [
+   7.8,
+   14.5,
+   4.0,
+   4.5,
+   6.4,
+   8.2
+  ],
+  "limits": [
+   "thermal_n1",
+   "thermal_n1",
+   "thermal_n1",
+   "thermal_n1",
+   "thermal_n1",
+   "thermal_n1"
+  ],
+  "preexisting_excluded": [
+   1857,
+   1857,
+   1857,
+   1857,
+   1857,
+   1857
+  ]
+ },
+ {
+  "buses": 1062,
+  "branches": 1698,
+  "n1_limit": 1.15,
+  "corridors": 6,
+  "wall_s": 9.2,
+  "atc_mw": [
+   0.0,
+   0.0,
+   2.1,
+   2.5,
+   2.9,
+   3.0
+  ],
+  "ac_mw": [
+   11.1,
+   6.4,
+   2.3,
+   2.8,
+   3.6,
+   3.6
+  ],
+  "dc_mw": [
+   11.1,
+   45.3,
+   21.5,
+   6.2,
+   8.2,
+   9.2
+  ],
+  "limits": [
+   "thermal_n1",
+   "thermal_n1",
+   "thermal_n1",
+   "thermal_n1",
+   "thermal_n1",
+   "thermal_n1"
+  ],
+  "preexisting_excluded": [
+   949,
+   949,
+   949,
+   949,
+   949,
+   949
+  ]
+ }
+]

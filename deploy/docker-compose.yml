@@ -1,0 +1,87 @@
+# GridSovereign reference deployment: 3 control-centre nodes (quorum election), Postgres historian, Redis Streams bus.
+# NOT RUN in the build environment (no container runtime there): the YAML parses, the commands mirror tools/stack.sh.
+# Secrets are files in ./secrets (see deploy/README.md); nothing secret is in this file.
+name: gridsovereign
+x-core-env: &coreenv
+  GS_TOKEN_TRUST: /run/secrets/token_trust
+  GS_SECRET_FILE: /run/secrets/audit_key   # still needed for the audit chain key in asymmetric mode
+  CIM_URL: http://cimpds:8081
+  EMS_URL: http://ems:8082
+  FEP_URL: http://fep:8084
+x-core: &core
+  build: { context: .., dockerfile: deploy/docker/Dockerfile.core }
+  restart: unless-stopped
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: ["no-new-privileges:true"]
+  tmpfs: [/tmp]
+  depends_on: { cimpds: { condition: service_started }, redis: { condition: service_healthy } }
+services:
+  postgres:
+    image: postgres:16            # swap for a timescale/timescaledb pg16 image to get hypertables (untested here)
+    environment: { POSTGRES_DB: gs, POSTGRES_PASSWORD_FILE: /run/secrets/pg_password }
+    secrets: [pg_password]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck: { test: ["CMD", "pg_isready", "-U", "postgres"], interval: 5s, retries: 20 }
+  redis:
+    image: redis:7.2
+    # no password: reachable only on the compose network; the Java publisher supports AUTH (redis://:pw@host) but secrets in URLs need a different mechanism
+    command: ["redis-server", "--appendonly", "yes", "--save", "", "--protected-mode", "yes"]
+    volumes: [redisdata:/data]
+    healthcheck: { test: ["CMD", "redis-cli", "ping"], interval: 5s, retries: 20 }
+  cimpds:
+    build: { context: .., dockerfile: deploy/docker/Dockerfile.cimpds }
+    environment: { GS_TOKEN_TRUST: /run/secrets/token_trust, GS_TOKEN_KEY: /run/secrets/key_cimpds }
+    secrets: [token_trust, key_cimpds]
+    volumes: [cimstate:/state]
+  ems:
+    build: { context: .., dockerfile: deploy/docker/Dockerfile.python, args: { SVC: ems-analytics } }
+    command: ["python", "-m", "uvicorn", "ems.api:app", "--host", "0.0.0.0", "--port", "8082"]
+    environment: { GS_TOKEN_TRUST: /run/secrets/token_trust, GS_TOKEN_KEY: /run/secrets/key_ems, CIM_URL: "http://cimpds:8081" }
+    secrets: [token_trust, key_ems]
+  historian:
+    build: { context: .., dockerfile: deploy/docker/Dockerfile.python, args: { SVC: historian } }
+    command: ["python", "-m", "uvicorn", "hist.app:app", "--host", "0.0.0.0", "--port", "8085"]
+    environment:
+      GS_TOKEN_TRUST: /run/secrets/token_trust
+      GS_TOKEN_KEY: /run/secrets/key_historian
+      HIST_DSN_FILE: /run/secrets/hist_dsn
+      HIST_BUS: redis://redis:6379
+    secrets: [token_trust, key_historian, hist_dsn]
+    depends_on: { postgres: { condition: service_healthy }, redis: { condition: service_healthy } }
+  fep:
+    build: { context: .., dockerfile: deploy/docker/Dockerfile.go, args: { CMD: fep } }
+    command: ["-model", "ieee118", "-ingest", "http://core-a:8083/api/ingest", "-ingest", "http://core-b:8083/api/ingest", "-ingest", "http://core-c:8083/api/ingest"]
+    environment: { GS_TOKEN_TRUST: /run/secrets/token_trust, GS_TOKEN_KEY: /run/secrets/key_fep }
+    secrets: [token_trust, key_fep]
+  core-a:
+    <<: *core
+    command: ["-id", "A", "-listen", "0.0.0.0:8083", "-peer", "B=http://core-b:8083", "-peer", "C=http://core-c:8083", "-bus", "redis://redis:6379"]
+    environment: { <<: *coreenv, GS_TOKEN_KEY: /run/secrets/key_core_a }
+    secrets: [token_trust, key_core_a, audit_key]
+    volumes: [core-a:/data]
+  core-b:
+    <<: *core
+    command: ["-id", "B", "-listen", "0.0.0.0:8083", "-peer", "A=http://core-a:8083", "-peer", "C=http://core-c:8083", "-bus", "redis://redis:6379"]
+    environment: { <<: *coreenv, GS_TOKEN_KEY: /run/secrets/key_core_b }
+    secrets: [token_trust, key_core_b, audit_key]
+    volumes: [core-b:/data]
+  core-c:
+    <<: *core
+    command: ["-id", "C", "-listen", "0.0.0.0:8083", "-peer", "A=http://core-a:8083", "-peer", "B=http://core-b:8083", "-bus", "redis://redis:6379"]
+    environment: { <<: *coreenv, GS_TOKEN_KEY: /run/secrets/key_core_c }
+    secrets: [token_trust, key_core_c, audit_key]
+    volumes: [core-c:/data]
+volumes: { pgdata: {}, redisdata: {}, cimstate: {}, core-a: {}, core-b: {}, core-c: {} }
+secrets:
+  token_trust: { file: ./secrets/trust.json }
+  key_cimpds: { file: ./secrets/outstation.tokkey }
+  key_ems: { file: ./secrets/ems.tokkey }
+  key_historian: { file: ./secrets/historian.tokkey }
+  key_fep: { file: ./secrets/fep.tokkey }
+  key_core_a: { file: ./secrets/core-A.tokkey }
+  key_core_b: { file: ./secrets/core-B.tokkey }
+  key_core_c: { file: ./secrets/core-C.tokkey }
+  audit_key: { file: ./secrets/audit.key }
+  pg_password: { file: ./secrets/pg_password }
+  hist_dsn: { file: ./secrets/hist_dsn }

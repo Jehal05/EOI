@@ -1,0 +1,752 @@
+{
+ "generated_by": "hand-written registry, checked by tools/trace.py",
+ "requirements": [
+  {
+   "id": "ITEM-01",
+   "source": "brief item 1",
+   "text": "N-2 contingency screening with ranking and pre-screening (LODF)",
+   "status": "met",
+   "code": [
+    "services/ems-analytics/ems/n2.py"
+   ],
+   "tests": [
+    "services/ems-analytics/tests/test_n2.py"
+   ],
+   "e2e": [
+    "tools/ui_e2e.py"
+   ],
+   "bench": [
+    "tools/bench_n2.py",
+    "docs/bench_n2.json"
+   ],
+   "ui": [
+    "ui/src/components/Analysis.tsx"
+   ],
+   "doc": "STATUS: N-2 screening",
+   "limit": "DC pre-screen can miss AC-only violations; see N-2 limits in STATUS"
+  },
+  {
+   "id": "ITEM-02",
+   "source": "brief item 2",
+   "text": "Short-circuit analysis (IEC 60909-style, symmetrical + unsymmetrical)",
+   "status": "partial",
+   "code": [
+    "services/ems-analytics/ems/shortcircuit.py"
+   ],
+   "tests": [
+    "services/ems-analytics/tests/test_shortcircuit.py"
+   ],
+   "e2e": [
+    "tools/ui_e2e.py"
+   ],
+   "bench": [
+    "tools/bench_sc.py",
+    "docs/bench_sc.json"
+   ],
+   "ui": [
+    "ui/src/components/ShortCircuit.tsx"
+   ],
+   "doc": "STATUS: Short-circuit analysis",
+   "limit": "IEC 60909-style, not certified against the standard's worked examples beyond those in the tests"
+  },
+  {
+   "id": "ITEM-03",
+   "source": "brief item 3",
+   "text": "Optimal power flow, then security-constrained OPF",
+   "status": "partial",
+   "code": [
+    "services/ems-analytics/ems/opf.py"
+   ],
+   "tests": [
+    "services/ems-analytics/tests/test_opf.py"
+   ],
+   "e2e": [
+    "tools/ui_e2e.py"
+   ],
+   "bench": [
+    "tools/bench_opf.py",
+    "docs/bench_opf.json"
+   ],
+   "ui": [
+    "ui/src/components/Dispatch.tsx"
+   ],
+   "doc": "STATUS: Optimal power flow",
+   "limit": "DC network LP; preventive SCOPF only"
+  },
+  {
+   "id": "ITEM-04",
+   "source": "brief item 4",
+   "text": "Security enhancement (redispatch, switching, load shed remedial actions)",
+   "status": "met",
+   "code": [
+    "services/ems-analytics/ems/security.py"
+   ],
+   "tests": [
+    "services/ems-analytics/tests/test_security.py"
+   ],
+   "e2e": [
+    "tools/ui_e2e.py"
+   ],
+   "bench": [
+    "tools/bench_sec.py",
+    "docs/bench_sec.json"
+   ],
+   "ui": [
+    "ui/src/components/Security.tsx"
+   ],
+   "doc": "STATUS: Security enhancement",
+   "limit": "Advisory only"
+  },
+  {
+   "id": "ITEM-05",
+   "source": "brief item 5",
+   "text": "Transmission corridor capability monitor (TCM)",
+   "status": "met",
+   "code": [
+    "services/ems-analytics/ems/tcm.py"
+   ],
+   "tests": [
+    "services/ems-analytics/tests/test_tcm.py"
+   ],
+   "e2e": [
+    "tools/ui_e2e.py"
+   ],
+   "bench": [
+    "tools/bench_tcm.py",
+    "docs/bench_tcm.json"
+   ],
+   "ui": [
+    "ui/src/components/Tcm.tsx"
+   ],
+   "doc": "STATUS: Transmission corridor capability",
+   "limit": ""
+  },
+  {
+   "id": "ITEM-06",
+   "source": "brief item 6",
+   "text": "Load and renewable forecasting with uncertainty bands (advisory only)",
+   "status": "met",
+   "code": [
+    "services/historian/hist/forecast.py"
+   ],
+   "tests": [
+    "services/historian/tests/test_forecast.py"
+   ],
+   "e2e": [
+    "tools/ui_e2e.py"
+   ],
+   "bench": [
+    "tools/bench_forecast.py",
+    "docs/bench_forecast.json"
+   ],
+   "ui": [
+    "ui/src/components/Forecast.tsx"
+   ],
+   "doc": "STATUS: Forecasting limits",
+   "limit": "Accuracy shown on synthetic series only"
+  },
+  {
+   "id": "ITEM-07",
+   "source": "brief item 7",
+   "text": "AGC (multi-area, governor model, ACE, regulation dispatch)",
+   "status": "partial",
+   "code": [
+    "services/ems-analytics/ems/agc.py"
+   ],
+   "tests": [
+    "services/ems-analytics/tests/test_agc.py"
+   ],
+   "e2e": [
+    "tools/ui_e2e.py"
+   ],
+   "bench": [
+    "tools/bench_agc.py",
+    "docs/bench_agc.json"
+   ],
+   "ui": [
+    "ui/src/components/Agc.tsx"
+   ],
+   "doc": "STATUS: Multi-area AGC",
+   "limit": "Simulation/advisory, not closed on real units"
+  },
+  {
+   "id": "ITEM-08",
+   "source": "brief item 8",
+   "text": "Dynamic security assessment: voltage, transient, small-signal",
+   "status": "partial",
+   "code": [
+    "services/ems-analytics/ems/dsa.py"
+   ],
+   "tests": [
+    "services/ems-analytics/tests/test_dsa.py"
+   ],
+   "e2e": [
+    "tools/ui_e2e.py"
+   ],
+   "bench": [
+    "tools/bench_dsa.py",
+    "docs/bench_dsa.json"
+   ],
+   "ui": [
+    "ui/src/components/Dsa.tsx"
+   ],
+   "doc": "STATUS: Dynamic security assessment",
+   "limit": "Classical-model dynamics with synthetic parameters"
+  },
+  {
+   "id": "ITEM-09",
+   "source": "brief item 9",
+   "text": "Outage scheduler + switching plans",
+   "status": "met",
+   "code": [
+    "services/ems-analytics/ems/outage.py",
+    "services/scada-core/src/gs/core/Engine.java"
+   ],
+   "tests": [
+    "services/ems-analytics/tests/test_outage.py",
+    "services/scada-core/test/gs/core/EngineTests.java"
+   ],
+   "e2e": [
+    "tools/e2e_core.py",
+    "tools/ui_e2e.py"
+   ],
+   "bench": [
+    "tools/bench_outage.py",
+    "docs/bench_outage.json"
+   ],
+   "ui": [
+    "ui/src/components/Outages.tsx"
+   ],
+   "doc": "STATUS: Outage scheduler",
+   "limit": ""
+  },
+  {
+   "id": "ITEM-10",
+   "source": "brief item 10",
+   "text": "Operator log and shift handover; comms-loss staleness detection",
+   "status": "met",
+   "code": [
+    "services/scada-core/src/gs/core/Engine.java",
+    "services/fep-gateway/cmd/fep/main.go"
+   ],
+   "tests": [
+    "services/scada-core/test/gs/core/EngineTests.java"
+   ],
+   "e2e": [
+    "tools/e2e_comms.py",
+    "tools/e2e_core.py",
+    "tools/ui_e2e.py"
+   ],
+   "bench": [
+    "tools/bench_logbook.py",
+    "docs/bench_logbook.json"
+   ],
+   "ui": [
+    "ui/src/components/Logbook.tsx"
+   ],
+   "doc": "STATUS: Log, handover and communications limits",
+   "limit": ""
+  },
+  {
+   "id": "ITEM-11",
+   "source": "brief item 11",
+   "text": "Load-shed support / ADMS",
+   "status": "partial",
+   "code": [
+    "services/ems-analytics/ems/shed.py"
+   ],
+   "tests": [
+    "services/ems-analytics/tests/test_shed.py"
+   ],
+   "e2e": [
+    "tools/ui_e2e.py"
+   ],
+   "bench": [
+    "tools/bench_shed.py",
+    "docs/bench_shed.json"
+   ],
+   "ui": [
+    "ui/src/components/Shed.tsx"
+   ],
+   "doc": "STATUS: Load-shed",
+   "limit": "Support/advisory; no feeder-level ADMS model"
+  },
+  {
+   "id": "ITEM-12",
+   "source": "brief item 12",
+   "text": "Dispatcher training simulator (scenario authoring, instructor console, scoring)",
+   "status": "met",
+   "code": [
+    "services/ems-analytics/ems/dts.py"
+   ],
+   "tests": [
+    "services/ems-analytics/tests/test_dts.py"
+   ],
+   "e2e": [
+    "tools/ui_e2e.py"
+   ],
+   "bench": [
+    "tools/bench_dts.py",
+    "docs/bench_dts.json"
+   ],
+   "ui": [
+    "ui/src/components/Dts.tsx"
+   ],
+   "doc": "STATUS: Dispatcher training simulator",
+   "limit": "Private per-session copy, not a full dynamic plant simulation"
+  },
+  {
+   "id": "ITEM-13",
+   "source": "brief item 13",
+   "text": "Secure 104 (IEC 62351 style), IEC 101",
+   "status": "partial",
+   "code": [
+    "services/fep-gateway/internal/secure/tls.go",
+    "services/fep-gateway/internal/iec104/auth.go",
+    "services/fep-gateway/internal/iec101/ft12.go",
+    "services/fep-gateway/cmd/pki/main.go"
+   ],
+   "tests": [
+    "services/fep-gateway/internal/secure/tls_test.go",
+    "services/fep-gateway/internal/iec101/fuzz_test.go"
+   ],
+   "e2e": [
+    "tools/e2e_secure.py"
+   ],
+   "bench": [
+    "services/fep-gateway/internal/secure/gi_bench_test.go",
+    "docs/BENCHMARKS.md"
+   ],
+   "ui": [
+    "ui/src/components/System.tsx"
+   ],
+   "doc": "STATUS: Secure field links: limits (item 13)",
+   "limit": "Application-layer authentication is our own subset, not IEC 62351-5 wire-compatible; IEC 101 has no security by design"
+  },
+  {
+   "id": "ITEM-14",
+   "source": "brief item 14",
+   "text": "DNP3, ICCP/TASE.2, IEC 61850 MMS gateway, C37.118 PMU, OPC",
+   "status": "partial",
+   "code": [
+    "services/fep-gateway/internal/dnp3/app.go",
+    "services/fep-gateway/internal/c37118/c37118.go",
+    "services/fep-gateway/internal/pmubridge/bridge.go",
+    "services/cim-pds/src/pointlist.rs",
+    "services/fep-gateway/cmd/pmu-sim/main.go",
+    "services/fep-gateway/internal/opcua/server.go",
+    "services/fep-gateway/internal/opcua/codec.go"
+   ],
+   "tests": [
+    "services/fep-gateway/internal/dnp3/dnp3_test.go",
+    "services/fep-gateway/internal/dnp3/fuzz_test.go",
+    "services/fep-gateway/internal/c37118/fuzz_test.go",
+    "services/fep-gateway/internal/pmubridge/bridge_test.go",
+    "services/fep-gateway/internal/opcua/server_test.go"
+   ],
+   "e2e": [
+    "tools/e2e_secure.py",
+    "tools/e2e_pmu.py",
+    "tools/ui_e2e.py",
+    "tools/e2e_opcua.py"
+   ],
+   "bench": [
+    "docs/BENCHMARKS.md"
+   ],
+   "ui": [
+    "ui/src/components/System.tsx"
+   ],
+   "doc": "STATUS: DNP3 and synchrophasor protocols",
+   "limit": "DNP3, C37.118 (PMU mapped into the point model, synthetic PMU, read-only) and a REDUCED read-only OPC UA server (None security, anonymous, Read/Browse; tested with asyncua only); ICCP/TASE.2 and IEC 61850 MMS NOT built"
+  },
+  {
+   "id": "ITEM-15",
+   "source": "brief item 15",
+   "text": "CIM diff/merge/approval workflow and hierarchical merge",
+   "status": "met",
+   "code": [
+    "services/cim-pds/src/diff.rs",
+    "services/cim-pds/src/govern.rs"
+   ],
+   "tests": [
+    "services/cim-pds/src/diff.rs"
+   ],
+   "e2e": [
+    "tools/e2e_models.py",
+    "tools/ui_e2e.py"
+   ],
+   "bench": [],
+   "ui": [
+    "ui/src/components/Governance.tsx"
+   ],
+   "doc": "STATUS: Model change governance",
+   "limit": ""
+  },
+  {
+   "id": "ITEM-16",
+   "source": "brief item 16",
+   "text": "Full IEC 61970-552 export; legacy importers; parallel-run mode",
+   "status": "partial",
+   "code": [
+    "services/cim-pds/src/cimxml.rs",
+    "services/cim-pds/src/legacy.rs",
+    "services/scada-core/src/gs/core/Parallel.java"
+   ],
+   "tests": [
+    "services/cim-pds/src/cimxml.rs",
+    "services/cim-pds/src/legacy.rs"
+   ],
+   "e2e": [
+    "tools/e2e_interop.py",
+    "tools/ui_e2e.py"
+   ],
+   "bench": [],
+   "ui": [
+    "ui/src/components/Interop.tsx"
+   ],
+   "doc": "STATUS: Model-exchange limits",
+   "limit": "Not certified or tested against third-party CIM tools"
+  },
+  {
+   "id": "ITEM-17",
+   "source": "brief item 17",
+   "text": "Robust cold-start power flow; sparse bad-data identification above 3,000 states",
+   "status": "met",
+   "code": [
+    "services/ems-analytics/ems/powerflow.py",
+    "services/ems-analytics/ems/state_estimator.py"
+   ],
+   "tests": [
+    "services/ems-analytics/tests/test_scale.py",
+    "services/ems-analytics/tests/test_powerflow.py",
+    "services/ems-analytics/tests/test_state_estimator.py"
+   ],
+   "e2e": [],
+   "bench": [
+    "tools/bench_scale.py",
+    "docs/bench_scale.json"
+   ],
+   "ui": [],
+   "doc": "STATUS: Scale-hardening limits",
+   "limit": "Sparse screening can miss leverage-masked errors"
+  },
+  {
+   "id": "ITEM-18",
+   "source": "brief item 18",
+   "text": "Distributed N-1/N-2 across workers",
+   "status": "partial",
+   "code": [
+    "services/ems-analytics/ems/distributed.py"
+   ],
+   "tests": [
+    "services/ems-analytics/tests/test_distributed.py"
+   ],
+   "e2e": [
+    "tools/e2e_distributed.py",
+    "tools/ui_e2e.py"
+   ],
+   "bench": [],
+   "ui": [
+    "ui/src/components/Distributed.tsx"
+   ],
+   "doc": "STATUS: Distributed-analysis limits",
+   "limit": "Correct and fault tolerant; speed-up NOT shown (one host)"
+  },
+  {
+   "id": "ITEM-19",
+   "source": "brief item 19",
+   "text": "Quorum leader election with fencing; mTLS; asymmetric tokens",
+   "status": "partial",
+   "code": [
+    "services/scada-core/src/gs/core/Cluster.java",
+    "services/fep-gateway/internal/token/asym.go",
+    "services/fep-gateway/internal/mtlsproxy/proxy.go",
+    "services/ems-analytics/ems/asym_token.py",
+    "services/cim-pds/src/auth.rs"
+   ],
+   "tests": [
+    "services/scada-core/test/gs/core/ClusterTests.java",
+    "services/scada-core/test/gs/core/AsymTokenTests.java",
+    "services/fep-gateway/internal/token/asym_test.go",
+    "services/fep-gateway/internal/mtlsproxy/proxy_test.go",
+    "services/ems-analytics/tests/test_asym.py"
+   ],
+   "e2e": [
+    "tools/e2e_quorum.py",
+    "tools/e2e_asym.py",
+    "tools/e2e_mtls.py",
+    "tools/ui_e2e.py"
+   ],
+   "bench": [],
+   "ui": [
+    "ui/src/components/System.tsx"
+   ],
+   "doc": "STATUS: Resilience and identity limits",
+   "limit": "Not Raft (no log-completeness vote check); mTLS only core-to-core"
+  },
+  {
+   "id": "ITEM-20",
+   "source": "brief item 20",
+   "text": "Postgres/Timescale historian, message bus, Helm/compose files",
+   "status": "partial",
+   "code": [
+    "services/historian/hist/pgstore.py",
+    "services/historian/hist/busconsumer.py",
+    "services/scada-core/src/gs/core/Bus.java",
+    "deploy/docker-compose.yml",
+    "deploy/helm/gridsovereign/Chart.yaml"
+   ],
+   "tests": [
+    "services/historian/tests/test_pgstore.py",
+    "services/historian/tests/test_bus.py",
+    "services/scada-core/test/gs/core/BusTests.java"
+   ],
+   "e2e": [
+    "tools/e2e_bus.py",
+    "tools/ui_e2e.py"
+   ],
+   "bench": [
+    "tools/bench_hist.py"
+   ],
+   "ui": [
+    "ui/src/components/System.tsx"
+   ],
+   "doc": "STATUS: Historian / bus / deployment limits",
+   "limit": "TimescaleDB untested; compose and Helm never run"
+  },
+  {
+   "id": "ITEM-21",
+   "source": "brief item 21",
+   "text": "Fuzzing of parsers, SAST/DAST, complete SBOM with licences, 7-day soak harness",
+   "status": "partial",
+   "code": [
+    "tools/dast.py",
+    "tools/sast.sh",
+    "tools/sbom.py",
+    "tools/soak.py"
+   ],
+   "tests": [
+    "services/fep-gateway/internal/iec104/fuzz_test.go",
+    "services/cim-pds/src/fuzz.rs",
+    "services/scada-core/test/gs/core/FuzzTests.java"
+   ],
+   "e2e": [
+    "tools/dast.py"
+   ],
+   "bench": [],
+   "ui": [],
+   "doc": "STATUS: Security-testing limits",
+   "limit": "Fuzzers short; the 7-day soak was NOT run",
+   "suites": [
+    "sast",
+    "sbom",
+    "soak-selftest"
+   ]
+  },
+  {
+   "id": "ITEM-22",
+   "source": "brief item 22",
+   "text": "Conformance + acceptance report, traceability matrix, usability-study harness, updated demo and gap list",
+   "status": "partial",
+   "code": [
+    "tools/conformance.py",
+    "tools/trace.py",
+    "tools/conf_report.py",
+    "tools/usability.py",
+    "tools/eoi_score.py"
+   ],
+   "tests": [],
+   "e2e": [],
+   "bench": [],
+   "ui": [],
+   "doc": "docs/CONFORMANCE.md",
+   "limit": "EOI scoring rubric not provided (weights file is a template); usability study NOT run (harness only); conformance is self-run on one host",
+   "suites": [
+    "usability-selftest"
+   ]
+  },
+  {
+   "id": "RULE-01",
+   "source": "rules",
+   "text": "All code from scratch; security envelope (authN/Z, command authorization, crypto, audit) first-party",
+   "status": "met",
+   "code": [
+    "services/scada-core/src/gs/core/Token.java",
+    "services/fep-gateway/internal/token/token.go",
+    "services/cim-pds/src/auth.rs"
+   ],
+   "tests": [
+    "services/scada-core/test/gs/core/FoundationTests.java"
+   ],
+   "e2e": [
+    "tools/e2e_asym.py"
+   ],
+   "bench": [],
+   "ui": [],
+   "doc": "docs/SBOM.md",
+   "limit": "Permissive third-party libraries are used (see SBOM); crypto primitives come from the language libraries, the protocols are ours",
+   "suites": [
+    "sbom"
+   ]
+  },
+  {
+   "id": "RULE-02",
+   "source": "rules",
+   "text": "Only synthetic or public IEEE data; no fabricated numbers; extrapolations marked",
+   "status": "met",
+   "code": [
+    "tools/make_cim_json.py",
+    "tools/mk_legacy.py"
+   ],
+   "tests": [],
+   "e2e": [],
+   "bench": [
+    "docs/BENCHMARKS.md"
+   ],
+   "ui": [],
+   "doc": "docs/BENCHMARKS.md",
+   "limit": "Every benchmark section states its limits; N-1 ratings in the demo model are synthetic"
+  },
+  {
+   "id": "RULE-03",
+   "source": "rules",
+   "text": "Memory-safe languages on the network edge and the security path",
+   "status": "met",
+   "code": [
+    "services/fep-gateway/cmd/fep/main.go",
+    "services/cim-pds/src/main.rs",
+    "services/scada-core/src/gs/core/Api.java"
+   ],
+   "tests": [],
+   "e2e": [],
+   "bench": [],
+   "ui": [],
+   "doc": "docs/adr/0001-polyglot-services.md",
+   "limit": "Go, Rust, Java and Python only; tools/sast.sh blocks `unsafe` in Rust and Go",
+   "suites": [
+    "sast"
+   ]
+  },
+  {
+   "id": "RULE-04",
+   "source": "rules",
+   "text": "AI/ML advisory only, beside the deterministic result, global off switch and audit",
+   "status": "met",
+   "code": [
+    "services/scada-core/src/gs/core/Api.java",
+    "services/historian/hist/app.py"
+   ],
+   "tests": [],
+   "e2e": [
+    "tools/e2e_core.py"
+   ],
+   "bench": [],
+   "ui": [
+    "ui/src/components/Forecast.tsx"
+   ],
+   "doc": "STATUS: Forecasting",
+   "limit": "Only the forecaster is ML-like; it is outside the control loop"
+  },
+  {
+   "id": "RULE-05",
+   "source": "rules",
+   "text": "UI: ISA-101 calm palette, shape+colour severity, WCAG AA, axe clean, no token in storage, 3 themes, EN/HI",
+   "status": "met",
+   "code": [
+    "ui/src/lib/i18n.ts",
+    "ui/src/components/App.tsx"
+   ],
+   "tests": [
+    "ui/tests/logic.test.ts"
+   ],
+   "e2e": [
+    "tools/ui_e2e.py"
+   ],
+   "bench": [],
+   "ui": [],
+   "doc": "STATUS: Operator UI",
+   "limit": "axe-core covers automated rules only (about a third of WCAG); no assistive-technology user test"
+  },
+  {
+   "id": "RULE-06",
+   "source": "rules",
+   "text": "Every deviation disclosed in docs/STATUS.md",
+   "status": "met",
+   "code": [],
+   "tests": [],
+   "e2e": [],
+   "bench": [],
+   "ui": [],
+   "doc": "docs/STATUS.md",
+   "limit": "Self-reported",
+   "suites": [
+    "sast"
+   ]
+  },
+  {
+   "id": "DOD-01",
+   "source": "Definition of Done",
+   "text": "Unit + property tests with numerical validation against a published IEEE case or textbook example",
+   "status": "met",
+   "code": [],
+   "tests": [
+    "services/ems-analytics/tests/test_powerflow.py",
+    "services/ems-analytics/tests/test_contingency.py"
+   ],
+   "e2e": [],
+   "bench": [],
+   "ui": [],
+   "doc": "STATUS",
+   "limit": "Per-item tolerances are in the tests"
+  },
+  {
+   "id": "DOD-02",
+   "source": "Definition of Done",
+   "text": "Integration on the live stack via tools/stack.sh",
+   "status": "met",
+   "code": [
+    "tools/stack.sh"
+   ],
+   "tests": [],
+   "e2e": [
+    "tools/e2e_core.py",
+    "tools/e2e_models.py",
+    "tools/e2e_failover.py"
+   ],
+   "bench": [],
+   "ui": [],
+   "doc": "STATUS",
+   "limit": ""
+  },
+  {
+   "id": "DOD-03",
+   "source": "Definition of Done",
+   "text": "Browser check (tools/ui_e2e.py) including axe",
+   "status": "met",
+   "code": [],
+   "tests": [],
+   "e2e": [
+    "tools/ui_e2e.py"
+   ],
+   "bench": [],
+   "ui": [],
+   "doc": "STATUS",
+   "limit": ""
+  },
+  {
+   "id": "DOD-04",
+   "source": "Definition of Done",
+   "text": "Benchmarks on IEEE-118 and a tiled ~1k-bus model in docs/BENCHMARKS.md with honest limits",
+   "status": "partial",
+   "code": [],
+   "tests": [],
+   "e2e": [],
+   "bench": [
+    "docs/BENCHMARKS.md"
+   ],
+   "ui": [],
+   "doc": "docs/BENCHMARKS.md",
+   "limit": "Several protocol/model items have no ~1k-bus benchmark; see the gap list"
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{{- /* name, image, port, extra env/command per service */ -}}
+{{- $svcs := list
+  (dict "name" "cimpds" "image" "cimpds" "port" 8081 "key" "outstation")
+  (dict "name" "ems" "image" "ems" "port" 8082 "key" "ems" "cmd" (list "python" "-m" "uvicorn" "ems.api:app" "--host" "0.0.0.0" "--port" "8082"))
+  (dict "name" "historian" "image" "historian" "port" 8085 "key" "historian" "cmd" (list "python" "-m" "uvicorn" "hist.app:app" "--host" "0.0.0.0" "--port" "8085") "hist" true)
+  (dict "name" "fep" "image" "fep" "port" 8084 "key" "fep" "args" (list "-model" "ieee118" "-ingest" "http://gs-core-api:8083/api/ingest")) -}}
+{{- range $s := $svcs }}
+apiVersion: v1
+kind: Service
+metadata: { name: gs-{{ $s.name }} }
+spec:
+  selector: { app: gs-{{ $s.name }} }
+  ports: [{ port: {{ $s.port }} }]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: gs-{{ $s.name }} }
+spec:
+  replicas: 1
+  selector: { matchLabels: { app: gs-{{ $s.name }} } }
+  template:
+    metadata: { labels: { app: gs-{{ $s.name }} } }
+    spec:
+      {{- include "gs.podSecurity" $ | nindent 6 }}
+      containers:
+        - name: {{ $s.name }}
+          image: {{ include "gs.image" (dict "root" $ "name" $s.image) }}
+          imagePullPolicy: {{ $.Values.image.pullPolicy }}
+          {{- include "gs.containerSecurity" $ | nindent 10 }}
+          {{- if $s.cmd }}
+          command: {{ toJson $s.cmd }}
+          {{- end }}
+          {{- if $s.args }}
+          args: {{ toJson $s.args }}
+          {{- end }}
+          env:
+            - { name: GS_TOKEN_TRUST, value: /run/secrets/gs/trust.json }
+            - { name: GS_TOKEN_KEY, value: /run/secrets/gs/{{ $s.key }}.tokkey }
+            {{- if $s.hist }}
+            - { name: HIST_DSN_FILE, value: /run/secrets/gs/{{ $.Values.postgres.dsnKey }} }
+            - { name: HIST_BUS, value: {{ $.Values.redis.url }} }
+            {{- end }}
+          ports: [{ containerPort: {{ $s.port }} }]
+          readinessProbe: { httpGet: { path: /health, port: {{ $s.port }} }, periodSeconds: 5 }
+          volumeMounts:
+            - { name: secrets, mountPath: /run/secrets/gs, readOnly: true }
+            - { name: tmp, mountPath: /tmp }
+      volumes:
+        - { name: secrets, secret: { secretName: {{ $.Values.secrets.existingSecret }}, defaultMode: 0400 } }
+        - { name: tmp, emptyDir: {} }
+---
+{{- end }}

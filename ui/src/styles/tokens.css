@@ -1,0 +1,24 @@
+/* Design tokens. Three complete themes + a dim ambient modifier. Colour is reserved for abnormal states (ISA-101);
+   severity is ALWAYS also encoded by shape, so no theme relies on hue alone. */
+:root, :root[data-theme="night"] {
+  --bg: #0e141b; --panel: #141c26; --panel2: #1a2430; --line: #2a3748; --line2: #38485c;
+  --text: #dce5ef; --muted: #93a4b7; --accent: #5cc8e8; --accent-ink: #06222b; --sel: #1f3a4d;
+  --p1: #ff6b63; --p2: #f5b13d; --p3: #a5b4ff; --p4: #93a4b7; --ok: #93a4b7; --focus: #ffffff;
+  --grid-normal: #5d7088; --grid-dead: #3a4656; --shadow: 0 6px 24px rgba(0,0,0,.45);
+  color-scheme: dark;
+}
+:root[data-theme="day"] {
+  --bg: #edf0f4; --panel: #ffffff; --panel2: #f3f5f8; --line: #c9d2dc; --line2: #aab6c4;
+  --text: #17212b; --muted: #4a5b6c; --accent: #0b6a8a; --accent-ink: #ffffff; --sel: #d6e9f2;
+  --p1: #c4251c; --p2: #8f5300; --p3: #3f4bbd; --p4: #4a5b6c; --ok: #4a5b6c; --focus: #000000;
+  --grid-normal: #7b8a9b; --grid-dead: #b9c3ce; --shadow: 0 6px 20px rgba(23,33,43,.18);
+  color-scheme: light;
+}
+:root[data-theme="cb"] {  /* colour-blind safe: Okabe-Ito derived, plus shape coding everywhere */
+  --bg: #11161c; --panel: #171e27; --panel2: #1e2733; --line: #2d3a4b; --line2: #3d4d62;
+  --text: #e6edf5; --muted: #9aabbd; --accent: #56b4e9; --accent-ink: #04202e; --sel: #233b52;
+  --p1: #f4793a; --p2: #f0e442; --p3: #cc79a7; --p4: #9aabbd; --ok: #9aabbd; --focus: #ffffff;
+  --grid-normal: #64778e; --grid-dead: #3a4656; --shadow: 0 6px 24px rgba(0,0,0,.45);
+  color-scheme: dark;
+}
+:root[data-dim="1"] #root { filter: brightness(.66) saturate(.8); }   /* ambient mode for dark control rooms */

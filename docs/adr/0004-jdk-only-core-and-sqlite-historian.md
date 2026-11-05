@@ -1,0 +1,2 @@
+# ADR 0004: JDK-only scada-core and SQLite historian for the prototype
+Status: accepted (prototype only). Context: build sandbox cannot reach Maven Central; Docker unavailable. Decision: scada-core uses only JDK 21 APIs (virtual threads, java.net.http, HttpServer); the historian uses SQLite (WAL). Consequences: zero third-party supply-chain surface in the security path; but no Spring features, and the historian cannot meet 10-year/20-lakh-point targets. Revisit: move to Spring Boot + PostgreSQL/TimescaleDB for the pilot (roadmap step 1).

@@ -1,0 +1,14 @@
+target/
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+dist/
+.pytest_cache/
+out/
+out-test/
+services/fep-gateway/bin/
+services/fep-gateway/fep
+*.db
+*.log
+*.pid

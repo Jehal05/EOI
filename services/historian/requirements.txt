@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+httpx
+pytest
+cryptography>=43
+pg8000>=1.31
+redis>=5

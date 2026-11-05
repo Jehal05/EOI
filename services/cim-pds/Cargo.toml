@@ -1,0 +1,21 @@
+[package]
+name = "cim-pds"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+[dependencies]
+axum = "0.7"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "signal"] }
+tower-http = { version = "0.5", features = ["cors"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+hmac = "0.12"
+hex = "0.4"
+base64 = "0.22"
+ed25519-dalek = { version = "2", default-features = false, features = ["std"] }
+
+[profile.release]
+opt-level = 3
+lto = "thin"

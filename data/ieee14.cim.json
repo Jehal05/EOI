@@ -1,0 +1,1449 @@
+{
+ "id": "ieee14",
+ "name": "IEEE 14-bus (synthetic node-breaker)",
+ "baseMVA": 100.0,
+ "source": "public IEEE test case (validation data); synthetic node-breaker topology and layout; source has no baseKV, synthetic 132 kV assigned; SYNTHETIC thermal ratings (1.3 x base-case flow, min 40 MVA); SYNTHETIC voltage operating band 0.93-1.07 pu; generator costs from public IEEE case gencost",
+ "substations": [
+  {
+   "mrid": "SS-0001",
+   "name": "Substation 1",
+   "region": "Southern",
+   "lat": 8.5,
+   "lon": 90.8182,
+   "vm0": 1.06,
+   "va0": 0.0
+  },
+  {
+   "mrid": "SS-0002",
+   "name": "Substation 2",
+   "region": "North-Eastern",
+   "lat": 14.165,
+   "lon": 91.9073,
+   "vm0": 1.045,
+   "va0": -4.98
+  },
+  {
+   "mrid": "SS-0003",
+   "name": "Substation 3",
+   "region": "Western",
+   "lat": 18.0723,
+   "lon": 96.0,
+   "vm0": 1.01,
+   "va0": -12.72
+  },
+  {
+   "mrid": "SS-0004",
+   "name": "Substation 4",
+   "region": "Eastern",
+   "lat": 20.5098,
+   "lon": 89.202,
+   "vm0": 1.019,
+   "va0": -10.33
+  },
+  {
+   "mrid": "SS-0005",
+   "name": "Substation 5",
+   "region": "Northern",
+   "lat": 13.0988,
+   "lon": 85.4199,
+   "vm0": 1.02,
+   "va0": -8.78
+  },
+  {
+   "mrid": "SS-0006",
+   "name": "Substation 6",
+   "region": "Southern",
+   "lat": 12.9818,
+   "lon": 74.9096,
+   "vm0": 1.07,
+   "va0": -14.22
+  },
+  {
+   "mrid": "SS-0007",
+   "name": "Substation 7",
+   "region": "North-Eastern",
+   "lat": 28.7467,
+   "lon": 89.0773,
+   "vm0": 1.062,
+   "va0": -13.37
+  },
+  {
+   "mrid": "SS-0008",
+   "name": "Substation 8",
+   "region": "Western",
+   "lat": 35.5,
+   "lon": 92.9323,
+   "vm0": 1.09,
+   "va0": -13.36
+  },
+  {
+   "mrid": "SS-0009",
+   "name": "Substation 9",
+   "region": "Eastern",
+   "lat": 25.0669,
+   "lon": 82.0099,
+   "vm0": 1.056,
+   "va0": -14.94
+  },
+  {
+   "mrid": "SS-0010",
+   "name": "Substation 10",
+   "region": "Northern",
+   "lat": 26.7162,
+   "lon": 74.1758,
+   "vm0": 1.051,
+   "va0": -15.1
+  },
+  {
+   "mrid": "SS-0011",
+   "name": "Substation 11",
+   "region": "Southern",
+   "lat": 20.5405,
+   "lon": 70.3611,
+   "vm0": 1.057,
+   "va0": -14.79
+  },
+  {
+   "mrid": "SS-0012",
+   "name": "Substation 12",
+   "region": "North-Eastern",
+   "lat": 8.6777,
+   "lon": 69.0,
+   "vm0": 1.055,
+   "va0": -15.07
+  },
+  {
+   "mrid": "SS-0013",
+   "name": "Substation 13",
+   "region": "Western",
+   "lat": 13.8859,
+   "lon": 70.1201,
+   "vm0": 1.05,
+   "va0": -15.16
+  },
+  {
+   "mrid": "SS-0014",
+   "name": "Substation 14",
+   "region": "Eastern",
+   "lat": 20.1126,
+   "lon": 75.4071,
+   "vm0": 1.036,
+   "va0": -16.04
+  }
+ ],
+ "voltageLevels": [
+  {
+   "mrid": "VL-0001",
+   "name": "SS-0001 132kV",
+   "substation": "SS-0001",
+   "nominalKV": 132.0,
+   "vMin": 0.93,
+   "vMax": 1.07
+  },
+  {
+   "mrid": "VL-0002",
+   "name": "SS-0002 132kV",
+   "substation": "SS-0002",
+   "nominalKV": 132.0,
+   "vMin": 0.93,
+   "vMax": 1.07
+  },
+  {
+   "mrid": "VL-0003",
+   "name": "SS-0003 132kV",
+   "substation": "SS-0003",
+   "nominalKV": 132.0,
+   "vMin": 0.93,
+   "vMax": 1.07
+  },
+  {
+   "mrid": "VL-0004",
+   "name": "SS-0004 132kV",
+   "substation": "SS-0004",
+   "nominalKV": 132.0,
+   "vMin": 0.93,
+   "vMax": 1.07
+  },
+  {
+   "mrid": "VL-0005",
+   "name": "SS-0005 132kV",
+   "substation": "SS-0005",
+   "nominalKV": 132.0,
+   "vMin": 0.93,
+   "vMax": 1.07
+  },
+  {
+   "mrid": "VL-0006",
+   "name": "SS-0006 132kV",
+   "substation": "SS-0006",
+   "nominalKV": 132.0,
+   "vMin": 0.93,
+   "vMax": 1.07
+  },
+  {
+   "mrid": "VL-0007",
+   "name": "SS-0007 132kV",
+   "substation": "SS-0007",
+   "nominalKV": 132.0,
+   "vMin": 0.93,
+   "vMax": 1.07
+  },
+  {
+   "mrid": "VL-0008",
+   "name": "SS-0008 132kV",
+   "substation": "SS-0008",
+   "nominalKV": 132.0,
+   "vMin": 0.93,
+   "vMax": 1.07
+  },
+  {
+   "mrid": "VL-0009",
+   "name": "SS-0009 132kV",
+   "substation": "SS-0009",
+   "nominalKV": 132.0,
+   "vMin": 0.93,
+   "vMax": 1.07
+  },
+  {
+   "mrid": "VL-0010",
+   "name": "SS-0010 132kV",
+   "substation": "SS-0010",
+   "nominalKV": 132.0,
+   "vMin": 0.93,
+   "vMax": 1.07
+  },
+  {
+   "mrid": "VL-0011",
+   "name": "SS-0011 132kV",
+   "substation": "SS-0011",
+   "nominalKV": 132.0,
+   "vMin": 0.93,
+   "vMax": 1.07
+  },
+  {
+   "mrid": "VL-0012",
+   "name": "SS-0012 132kV",
+   "substation": "SS-0012",
+   "nominalKV": 132.0,
+   "vMin": 0.93,
+   "vMax": 1.07
+  },
+  {
+   "mrid": "VL-0013",
+   "name": "SS-0013 132kV",
+   "substation": "SS-0013",
+   "nominalKV": 132.0,
+   "vMin": 0.93,
+   "vMax": 1.07
+  },
+  {
+   "mrid": "VL-0014",
+   "name": "SS-0014 132kV",
+   "substation": "SS-0014",
+   "nominalKV": 132.0,
+   "vMin": 0.93,
+   "vMax": 1.07
+  }
+ ],
+ "connectivityNodes": [
+  {
+   "mrid": "CN-0001-BB",
+   "name": "Busbar 1",
+   "voltageLevel": "VL-0001"
+  },
+  {
+   "mrid": "CN-0002-BB",
+   "name": "Busbar 2",
+   "voltageLevel": "VL-0002"
+  },
+  {
+   "mrid": "CN-0003-BB",
+   "name": "Busbar 3",
+   "voltageLevel": "VL-0003"
+  },
+  {
+   "mrid": "CN-0004-BB",
+   "name": "Busbar 4",
+   "voltageLevel": "VL-0004"
+  },
+  {
+   "mrid": "CN-0005-BB",
+   "name": "Busbar 5",
+   "voltageLevel": "VL-0005"
+  },
+  {
+   "mrid": "CN-0006-BB",
+   "name": "Busbar 6",
+   "voltageLevel": "VL-0006"
+  },
+  {
+   "mrid": "CN-0007-BB",
+   "name": "Busbar 7",
+   "voltageLevel": "VL-0007"
+  },
+  {
+   "mrid": "CN-0008-BB",
+   "name": "Busbar 8",
+   "voltageLevel": "VL-0008"
+  },
+  {
+   "mrid": "CN-0009-BB",
+   "name": "Busbar 9",
+   "voltageLevel": "VL-0009"
+  },
+  {
+   "mrid": "CN-0010-BB",
+   "name": "Busbar 10",
+   "voltageLevel": "VL-0010"
+  },
+  {
+   "mrid": "CN-0011-BB",
+   "name": "Busbar 11",
+   "voltageLevel": "VL-0011"
+  },
+  {
+   "mrid": "CN-0012-BB",
+   "name": "Busbar 12",
+   "voltageLevel": "VL-0012"
+  },
+  {
+   "mrid": "CN-0013-BB",
+   "name": "Busbar 13",
+   "voltageLevel": "VL-0013"
+  },
+  {
+   "mrid": "CN-0014-BB",
+   "name": "Busbar 14",
+   "voltageLevel": "VL-0014"
+  },
+  {
+   "mrid": "CN-BR0001-F",
+   "name": "Terminal BR0001-F",
+   "voltageLevel": "VL-0001"
+  },
+  {
+   "mrid": "CN-BR0001-T",
+   "name": "Terminal BR0001-T",
+   "voltageLevel": "VL-0002"
+  },
+  {
+   "mrid": "CN-BR0002-F",
+   "name": "Terminal BR0002-F",
+   "voltageLevel": "VL-0001"
+  },
+  {
+   "mrid": "CN-BR0002-T",
+   "name": "Terminal BR0002-T",
+   "voltageLevel": "VL-0005"
+  },
+  {
+   "mrid": "CN-BR0003-F",
+   "name": "Terminal BR0003-F",
+   "voltageLevel": "VL-0002"
+  },
+  {
+   "mrid": "CN-BR0003-T",
+   "name": "Terminal BR0003-T",
+   "voltageLevel": "VL-0003"
+  },
+  {
+   "mrid": "CN-BR0004-F",
+   "name": "Terminal BR0004-F",
+   "voltageLevel": "VL-0002"
+  },
+  {
+   "mrid": "CN-BR0004-T",
+   "name": "Terminal BR0004-T",
+   "voltageLevel": "VL-0004"
+  },
+  {
+   "mrid": "CN-BR0005-F",
+   "name": "Terminal BR0005-F",
+   "voltageLevel": "VL-0002"
+  },
+  {
+   "mrid": "CN-BR0005-T",
+   "name": "Terminal BR0005-T",
+   "voltageLevel": "VL-0005"
+  },
+  {
+   "mrid": "CN-BR0006-F",
+   "name": "Terminal BR0006-F",
+   "voltageLevel": "VL-0003"
+  },
+  {
+   "mrid": "CN-BR0006-T",
+   "name": "Terminal BR0006-T",
+   "voltageLevel": "VL-0004"
+  },
+  {
+   "mrid": "CN-BR0007-F",
+   "name": "Terminal BR0007-F",
+   "voltageLevel": "VL-0004"
+  },
+  {
+   "mrid": "CN-BR0007-T",
+   "name": "Terminal BR0007-T",
+   "voltageLevel": "VL-0005"
+  },
+  {
+   "mrid": "CN-BR0008-F",
+   "name": "Terminal BR0008-F",
+   "voltageLevel": "VL-0004"
+  },
+  {
+   "mrid": "CN-BR0008-T",
+   "name": "Terminal BR0008-T",
+   "voltageLevel": "VL-0007"
+  },
+  {
+   "mrid": "CN-BR0009-F",
+   "name": "Terminal BR0009-F",
+   "voltageLevel": "VL-0004"
+  },
+  {
+   "mrid": "CN-BR0009-T",
+   "name": "Terminal BR0009-T",
+   "voltageLevel": "VL-0009"
+  },
+  {
+   "mrid": "CN-BR0010-F",
+   "name": "Terminal BR0010-F",
+   "voltageLevel": "VL-0005"
+  },
+  {
+   "mrid": "CN-BR0010-T",
+   "name": "Terminal BR0010-T",
+   "voltageLevel": "VL-0006"
+  },
+  {
+   "mrid": "CN-BR0011-F",
+   "name": "Terminal BR0011-F",
+   "voltageLevel": "VL-0006"
+  },
+  {
+   "mrid": "CN-BR0011-T",
+   "name": "Terminal BR0011-T",
+   "voltageLevel": "VL-0011"
+  },
+  {
+   "mrid": "CN-BR0012-F",
+   "name": "Terminal BR0012-F",
+   "voltageLevel": "VL-0006"
+  },
+  {
+   "mrid": "CN-BR0012-T",
+   "name": "Terminal BR0012-T",
+   "voltageLevel": "VL-0012"
+  },
+  {
+   "mrid": "CN-BR0013-F",
+   "name": "Terminal BR0013-F",
+   "voltageLevel": "VL-0006"
+  },
+  {
+   "mrid": "CN-BR0013-T",
+   "name": "Terminal BR0013-T",
+   "voltageLevel": "VL-0013"
+  },
+  {
+   "mrid": "CN-BR0014-F",
+   "name": "Terminal BR0014-F",
+   "voltageLevel": "VL-0007"
+  },
+  {
+   "mrid": "CN-BR0014-T",
+   "name": "Terminal BR0014-T",
+   "voltageLevel": "VL-0008"
+  },
+  {
+   "mrid": "CN-BR0015-F",
+   "name": "Terminal BR0015-F",
+   "voltageLevel": "VL-0007"
+  },
+  {
+   "mrid": "CN-BR0015-T",
+   "name": "Terminal BR0015-T",
+   "voltageLevel": "VL-0009"
+  },
+  {
+   "mrid": "CN-BR0016-F",
+   "name": "Terminal BR0016-F",
+   "voltageLevel": "VL-0009"
+  },
+  {
+   "mrid": "CN-BR0016-T",
+   "name": "Terminal BR0016-T",
+   "voltageLevel": "VL-0010"
+  },
+  {
+   "mrid": "CN-BR0017-F",
+   "name": "Terminal BR0017-F",
+   "voltageLevel": "VL-0009"
+  },
+  {
+   "mrid": "CN-BR0017-T",
+   "name": "Terminal BR0017-T",
+   "voltageLevel": "VL-0014"
+  },
+  {
+   "mrid": "CN-BR0018-F",
+   "name": "Terminal BR0018-F",
+   "voltageLevel": "VL-0010"
+  },
+  {
+   "mrid": "CN-BR0018-T",
+   "name": "Terminal BR0018-T",
+   "voltageLevel": "VL-0011"
+  },
+  {
+   "mrid": "CN-BR0019-F",
+   "name": "Terminal BR0019-F",
+   "voltageLevel": "VL-0012"
+  },
+  {
+   "mrid": "CN-BR0019-T",
+   "name": "Terminal BR0019-T",
+   "voltageLevel": "VL-0013"
+  },
+  {
+   "mrid": "CN-BR0020-F",
+   "name": "Terminal BR0020-F",
+   "voltageLevel": "VL-0013"
+  },
+  {
+   "mrid": "CN-BR0020-T",
+   "name": "Terminal BR0020-T",
+   "voltageLevel": "VL-0014"
+  },
+  {
+   "mrid": "CN-G001",
+   "name": "Terminal G001",
+   "voltageLevel": "VL-0001"
+  },
+  {
+   "mrid": "CN-G002",
+   "name": "Terminal G002",
+   "voltageLevel": "VL-0002"
+  },
+  {
+   "mrid": "CN-G003",
+   "name": "Terminal G003",
+   "voltageLevel": "VL-0003"
+  },
+  {
+   "mrid": "CN-G004",
+   "name": "Terminal G004",
+   "voltageLevel": "VL-0006"
+  },
+  {
+   "mrid": "CN-G005",
+   "name": "Terminal G005",
+   "voltageLevel": "VL-0008"
+  },
+  {
+   "mrid": "CN-L0002",
+   "name": "Terminal L0002",
+   "voltageLevel": "VL-0002"
+  },
+  {
+   "mrid": "CN-L0003",
+   "name": "Terminal L0003",
+   "voltageLevel": "VL-0003"
+  },
+  {
+   "mrid": "CN-L0004",
+   "name": "Terminal L0004",
+   "voltageLevel": "VL-0004"
+  },
+  {
+   "mrid": "CN-L0005",
+   "name": "Terminal L0005",
+   "voltageLevel": "VL-0005"
+  },
+  {
+   "mrid": "CN-L0006",
+   "name": "Terminal L0006",
+   "voltageLevel": "VL-0006"
+  },
+  {
+   "mrid": "CN-L0009",
+   "name": "Terminal L0009",
+   "voltageLevel": "VL-0009"
+  },
+  {
+   "mrid": "CN-SH0009",
+   "name": "Terminal SH0009",
+   "voltageLevel": "VL-0009"
+  },
+  {
+   "mrid": "CN-L0010",
+   "name": "Terminal L0010",
+   "voltageLevel": "VL-0010"
+  },
+  {
+   "mrid": "CN-L0011",
+   "name": "Terminal L0011",
+   "voltageLevel": "VL-0011"
+  },
+  {
+   "mrid": "CN-L0012",
+   "name": "Terminal L0012",
+   "voltageLevel": "VL-0012"
+  },
+  {
+   "mrid": "CN-L0013",
+   "name": "Terminal L0013",
+   "voltageLevel": "VL-0013"
+  },
+  {
+   "mrid": "CN-L0014",
+   "name": "Terminal L0014",
+   "voltageLevel": "VL-0014"
+  }
+ ],
+ "switches": [
+  {
+   "mrid": "BRK-BR0001-F",
+   "name": "Breaker BR0001-F",
+   "type": "Breaker",
+   "node1": "CN-0001-BB",
+   "node2": "CN-BR0001-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0001-T",
+   "name": "Breaker BR0001-T",
+   "type": "Breaker",
+   "node1": "CN-0002-BB",
+   "node2": "CN-BR0001-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0002-F",
+   "name": "Breaker BR0002-F",
+   "type": "Breaker",
+   "node1": "CN-0001-BB",
+   "node2": "CN-BR0002-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0002-T",
+   "name": "Breaker BR0002-T",
+   "type": "Breaker",
+   "node1": "CN-0005-BB",
+   "node2": "CN-BR0002-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0003-F",
+   "name": "Breaker BR0003-F",
+   "type": "Breaker",
+   "node1": "CN-0002-BB",
+   "node2": "CN-BR0003-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0003-T",
+   "name": "Breaker BR0003-T",
+   "type": "Breaker",
+   "node1": "CN-0003-BB",
+   "node2": "CN-BR0003-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0004-F",
+   "name": "Breaker BR0004-F",
+   "type": "Breaker",
+   "node1": "CN-0002-BB",
+   "node2": "CN-BR0004-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0004-T",
+   "name": "Breaker BR0004-T",
+   "type": "Breaker",
+   "node1": "CN-0004-BB",
+   "node2": "CN-BR0004-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0005-F",
+   "name": "Breaker BR0005-F",
+   "type": "Breaker",
+   "node1": "CN-0002-BB",
+   "node2": "CN-BR0005-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0005-T",
+   "name": "Breaker BR0005-T",
+   "type": "Breaker",
+   "node1": "CN-0005-BB",
+   "node2": "CN-BR0005-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0006-F",
+   "name": "Breaker BR0006-F",
+   "type": "Breaker",
+   "node1": "CN-0003-BB",
+   "node2": "CN-BR0006-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0006-T",
+   "name": "Breaker BR0006-T",
+   "type": "Breaker",
+   "node1": "CN-0004-BB",
+   "node2": "CN-BR0006-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0007-F",
+   "name": "Breaker BR0007-F",
+   "type": "Breaker",
+   "node1": "CN-0004-BB",
+   "node2": "CN-BR0007-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0007-T",
+   "name": "Breaker BR0007-T",
+   "type": "Breaker",
+   "node1": "CN-0005-BB",
+   "node2": "CN-BR0007-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0008-F",
+   "name": "Breaker BR0008-F",
+   "type": "Breaker",
+   "node1": "CN-0004-BB",
+   "node2": "CN-BR0008-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0008-T",
+   "name": "Breaker BR0008-T",
+   "type": "Breaker",
+   "node1": "CN-0007-BB",
+   "node2": "CN-BR0008-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0009-F",
+   "name": "Breaker BR0009-F",
+   "type": "Breaker",
+   "node1": "CN-0004-BB",
+   "node2": "CN-BR0009-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0009-T",
+   "name": "Breaker BR0009-T",
+   "type": "Breaker",
+   "node1": "CN-0009-BB",
+   "node2": "CN-BR0009-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0010-F",
+   "name": "Breaker BR0010-F",
+   "type": "Breaker",
+   "node1": "CN-0005-BB",
+   "node2": "CN-BR0010-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0010-T",
+   "name": "Breaker BR0010-T",
+   "type": "Breaker",
+   "node1": "CN-0006-BB",
+   "node2": "CN-BR0010-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0011-F",
+   "name": "Breaker BR0011-F",
+   "type": "Breaker",
+   "node1": "CN-0006-BB",
+   "node2": "CN-BR0011-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0011-T",
+   "name": "Breaker BR0011-T",
+   "type": "Breaker",
+   "node1": "CN-0011-BB",
+   "node2": "CN-BR0011-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0012-F",
+   "name": "Breaker BR0012-F",
+   "type": "Breaker",
+   "node1": "CN-0006-BB",
+   "node2": "CN-BR0012-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0012-T",
+   "name": "Breaker BR0012-T",
+   "type": "Breaker",
+   "node1": "CN-0012-BB",
+   "node2": "CN-BR0012-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0013-F",
+   "name": "Breaker BR0013-F",
+   "type": "Breaker",
+   "node1": "CN-0006-BB",
+   "node2": "CN-BR0013-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0013-T",
+   "name": "Breaker BR0013-T",
+   "type": "Breaker",
+   "node1": "CN-0013-BB",
+   "node2": "CN-BR0013-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0014-F",
+   "name": "Breaker BR0014-F",
+   "type": "Breaker",
+   "node1": "CN-0007-BB",
+   "node2": "CN-BR0014-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0014-T",
+   "name": "Breaker BR0014-T",
+   "type": "Breaker",
+   "node1": "CN-0008-BB",
+   "node2": "CN-BR0014-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0015-F",
+   "name": "Breaker BR0015-F",
+   "type": "Breaker",
+   "node1": "CN-0007-BB",
+   "node2": "CN-BR0015-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0015-T",
+   "name": "Breaker BR0015-T",
+   "type": "Breaker",
+   "node1": "CN-0009-BB",
+   "node2": "CN-BR0015-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0016-F",
+   "name": "Breaker BR0016-F",
+   "type": "Breaker",
+   "node1": "CN-0009-BB",
+   "node2": "CN-BR0016-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0016-T",
+   "name": "Breaker BR0016-T",
+   "type": "Breaker",
+   "node1": "CN-0010-BB",
+   "node2": "CN-BR0016-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0017-F",
+   "name": "Breaker BR0017-F",
+   "type": "Breaker",
+   "node1": "CN-0009-BB",
+   "node2": "CN-BR0017-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0017-T",
+   "name": "Breaker BR0017-T",
+   "type": "Breaker",
+   "node1": "CN-0014-BB",
+   "node2": "CN-BR0017-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0018-F",
+   "name": "Breaker BR0018-F",
+   "type": "Breaker",
+   "node1": "CN-0010-BB",
+   "node2": "CN-BR0018-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0018-T",
+   "name": "Breaker BR0018-T",
+   "type": "Breaker",
+   "node1": "CN-0011-BB",
+   "node2": "CN-BR0018-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0019-F",
+   "name": "Breaker BR0019-F",
+   "type": "Breaker",
+   "node1": "CN-0012-BB",
+   "node2": "CN-BR0019-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0019-T",
+   "name": "Breaker BR0019-T",
+   "type": "Breaker",
+   "node1": "CN-0013-BB",
+   "node2": "CN-BR0019-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0020-F",
+   "name": "Breaker BR0020-F",
+   "type": "Breaker",
+   "node1": "CN-0013-BB",
+   "node2": "CN-BR0020-F",
+   "open": false
+  },
+  {
+   "mrid": "BRK-BR0020-T",
+   "name": "Breaker BR0020-T",
+   "type": "Breaker",
+   "node1": "CN-0014-BB",
+   "node2": "CN-BR0020-T",
+   "open": false
+  },
+  {
+   "mrid": "BRK-G001",
+   "name": "Breaker G001",
+   "type": "Breaker",
+   "node1": "CN-0001-BB",
+   "node2": "CN-G001",
+   "open": false
+  },
+  {
+   "mrid": "BRK-G002",
+   "name": "Breaker G002",
+   "type": "Breaker",
+   "node1": "CN-0002-BB",
+   "node2": "CN-G002",
+   "open": false
+  },
+  {
+   "mrid": "BRK-G003",
+   "name": "Breaker G003",
+   "type": "Breaker",
+   "node1": "CN-0003-BB",
+   "node2": "CN-G003",
+   "open": false
+  },
+  {
+   "mrid": "BRK-G004",
+   "name": "Breaker G004",
+   "type": "Breaker",
+   "node1": "CN-0006-BB",
+   "node2": "CN-G004",
+   "open": false
+  },
+  {
+   "mrid": "BRK-G005",
+   "name": "Breaker G005",
+   "type": "Breaker",
+   "node1": "CN-0008-BB",
+   "node2": "CN-G005",
+   "open": false
+  },
+  {
+   "mrid": "BRK-L0002",
+   "name": "Breaker L0002",
+   "type": "Breaker",
+   "node1": "CN-0002-BB",
+   "node2": "CN-L0002",
+   "open": false
+  },
+  {
+   "mrid": "BRK-L0003",
+   "name": "Breaker L0003",
+   "type": "Breaker",
+   "node1": "CN-0003-BB",
+   "node2": "CN-L0003",
+   "open": false
+  },
+  {
+   "mrid": "BRK-L0004",
+   "name": "Breaker L0004",
+   "type": "Breaker",
+   "node1": "CN-0004-BB",
+   "node2": "CN-L0004",
+   "open": false
+  },
+  {
+   "mrid": "BRK-L0005",
+   "name": "Breaker L0005",
+   "type": "Breaker",
+   "node1": "CN-0005-BB",
+   "node2": "CN-L0005",
+   "open": false
+  },
+  {
+   "mrid": "BRK-L0006",
+   "name": "Breaker L0006",
+   "type": "Breaker",
+   "node1": "CN-0006-BB",
+   "node2": "CN-L0006",
+   "open": false
+  },
+  {
+   "mrid": "BRK-L0009",
+   "name": "Breaker L0009",
+   "type": "Breaker",
+   "node1": "CN-0009-BB",
+   "node2": "CN-L0009",
+   "open": false
+  },
+  {
+   "mrid": "BRK-SH0009",
+   "name": "Breaker SH0009",
+   "type": "Breaker",
+   "node1": "CN-0009-BB",
+   "node2": "CN-SH0009",
+   "open": false
+  },
+  {
+   "mrid": "BRK-L0010",
+   "name": "Breaker L0010",
+   "type": "Breaker",
+   "node1": "CN-0010-BB",
+   "node2": "CN-L0010",
+   "open": false
+  },
+  {
+   "mrid": "BRK-L0011",
+   "name": "Breaker L0011",
+   "type": "Breaker",
+   "node1": "CN-0011-BB",
+   "node2": "CN-L0011",
+   "open": false
+  },
+  {
+   "mrid": "BRK-L0012",
+   "name": "Breaker L0012",
+   "type": "Breaker",
+   "node1": "CN-0012-BB",
+   "node2": "CN-L0012",
+   "open": false
+  },
+  {
+   "mrid": "BRK-L0013",
+   "name": "Breaker L0013",
+   "type": "Breaker",
+   "node1": "CN-0013-BB",
+   "node2": "CN-L0013",
+   "open": false
+  },
+  {
+   "mrid": "BRK-L0014",
+   "name": "Breaker L0014",
+   "type": "Breaker",
+   "node1": "CN-0014-BB",
+   "node2": "CN-L0014",
+   "open": false
+  }
+ ],
+ "acLineSegments": [
+  {
+   "mrid": "BR0001",
+   "name": "Branch 1-2",
+   "r": 0.01938,
+   "x": 0.05917,
+   "bch": 0.0528,
+   "rating": 210.0,
+   "node1": "CN-BR0001-F",
+   "node2": "CN-BR0001-T"
+  },
+  {
+   "mrid": "BR0002",
+   "name": "Branch 1-5",
+   "r": 0.05403,
+   "x": 0.22304,
+   "bch": 0.0492,
+   "rating": 100.0,
+   "node1": "CN-BR0002-F",
+   "node2": "CN-BR0002-T"
+  },
+  {
+   "mrid": "BR0003",
+   "name": "Branch 2-3",
+   "r": 0.04699,
+   "x": 0.19797,
+   "bch": 0.0438,
+   "rating": 100.0,
+   "node1": "CN-BR0003-F",
+   "node2": "CN-BR0003-T"
+  },
+  {
+   "mrid": "BR0004",
+   "name": "Branch 2-4",
+   "r": 0.05811,
+   "x": 0.17632,
+   "bch": 0.034,
+   "rating": 80.0,
+   "node1": "CN-BR0004-F",
+   "node2": "CN-BR0004-T"
+  },
+  {
+   "mrid": "BR0005",
+   "name": "Branch 2-5",
+   "r": 0.05695,
+   "x": 0.17388,
+   "bch": 0.0346,
+   "rating": 60.0,
+   "node1": "CN-BR0005-F",
+   "node2": "CN-BR0005-T"
+  },
+  {
+   "mrid": "BR0006",
+   "name": "Branch 3-4",
+   "r": 0.06701,
+   "x": 0.17103,
+   "bch": 0.0128,
+   "rating": 40.0,
+   "node1": "CN-BR0006-F",
+   "node2": "CN-BR0006-T"
+  },
+  {
+   "mrid": "BR0007",
+   "name": "Branch 4-5",
+   "r": 0.01335,
+   "x": 0.04211,
+   "bch": 0.0,
+   "rating": 90.0,
+   "node1": "CN-BR0007-F",
+   "node2": "CN-BR0007-T"
+  },
+  {
+   "mrid": "BR0011",
+   "name": "Branch 6-11",
+   "r": 0.09498,
+   "x": 0.1989,
+   "bch": 0.0,
+   "rating": 40.0,
+   "node1": "CN-BR0011-F",
+   "node2": "CN-BR0011-T"
+  },
+  {
+   "mrid": "BR0012",
+   "name": "Branch 6-12",
+   "r": 0.12291,
+   "x": 0.25581,
+   "bch": 0.0,
+   "rating": 40.0,
+   "node1": "CN-BR0012-F",
+   "node2": "CN-BR0012-T"
+  },
+  {
+   "mrid": "BR0013",
+   "name": "Branch 6-13",
+   "r": 0.06615,
+   "x": 0.13027,
+   "bch": 0.0,
+   "rating": 40.0,
+   "node1": "CN-BR0013-F",
+   "node2": "CN-BR0013-T"
+  },
+  {
+   "mrid": "BR0014",
+   "name": "Branch 7-8",
+   "r": 0.0,
+   "x": 0.17615,
+   "bch": 0.0,
+   "rating": 40.0,
+   "node1": "CN-BR0014-F",
+   "node2": "CN-BR0014-T"
+  },
+  {
+   "mrid": "BR0015",
+   "name": "Branch 7-9",
+   "r": 0.0,
+   "x": 0.11001,
+   "bch": 0.0,
+   "rating": 40.0,
+   "node1": "CN-BR0015-F",
+   "node2": "CN-BR0015-T"
+  },
+  {
+   "mrid": "BR0016",
+   "name": "Branch 9-10",
+   "r": 0.03181,
+   "x": 0.0845,
+   "bch": 0.0,
+   "rating": 40.0,
+   "node1": "CN-BR0016-F",
+   "node2": "CN-BR0016-T"
+  },
+  {
+   "mrid": "BR0017",
+   "name": "Branch 9-14",
+   "r": 0.12711,
+   "x": 0.27038,
+   "bch": 0.0,
+   "rating": 40.0,
+   "node1": "CN-BR0017-F",
+   "node2": "CN-BR0017-T"
+  },
+  {
+   "mrid": "BR0018",
+   "name": "Branch 10-11",
+   "r": 0.08205,
+   "x": 0.19207,
+   "bch": 0.0,
+   "rating": 40.0,
+   "node1": "CN-BR0018-F",
+   "node2": "CN-BR0018-T"
+  },
+  {
+   "mrid": "BR0019",
+   "name": "Branch 12-13",
+   "r": 0.22092,
+   "x": 0.19988,
+   "bch": 0.0,
+   "rating": 40.0,
+   "node1": "CN-BR0019-F",
+   "node2": "CN-BR0019-T"
+  },
+  {
+   "mrid": "BR0020",
+   "name": "Branch 13-14",
+   "r": 0.17093,
+   "x": 0.34802,
+   "bch": 0.0,
+   "rating": 40.0,
+   "node1": "CN-BR0020-F",
+   "node2": "CN-BR0020-T"
+  }
+ ],
+ "transformers": [
+  {
+   "mrid": "BR0008",
+   "name": "Branch 4-7",
+   "r": 0.0,
+   "x": 0.20912,
+   "bch": 0.0,
+   "rating": 40.0,
+   "node1": "CN-BR0008-F",
+   "node2": "CN-BR0008-T",
+   "ratio": 0.978,
+   "angle": 0.0
+  },
+  {
+   "mrid": "BR0009",
+   "name": "Branch 4-9",
+   "r": 0.0,
+   "x": 0.55618,
+   "bch": 0.0,
+   "rating": 40.0,
+   "node1": "CN-BR0009-F",
+   "node2": "CN-BR0009-T",
+   "ratio": 0.969,
+   "angle": 0.0
+  },
+  {
+   "mrid": "BR0010",
+   "name": "Branch 5-6",
+   "r": 0.0,
+   "x": 0.25202,
+   "bch": 0.0,
+   "rating": 60.0,
+   "node1": "CN-BR0010-F",
+   "node2": "CN-BR0010-T",
+   "ratio": 0.932,
+   "angle": 0.0
+  }
+ ],
+ "generators": [
+  {
+   "mrid": "G001",
+   "name": "Generator 1 @bus 1",
+   "node": "CN-G001",
+   "p": 232.4,
+   "q": -16.9,
+   "qmax": 10.0,
+   "qmin": 0.0,
+   "vset": 1.06,
+   "pmax": 332.4,
+   "pmin": 0.0,
+   "inService": true,
+   "fuel": "thermal",
+   "costC2": 0.0430293,
+   "costC1": 20.0,
+   "costC0": 0.0
+  },
+  {
+   "mrid": "G002",
+   "name": "Generator 2 @bus 2",
+   "node": "CN-G002",
+   "p": 40.0,
+   "q": 42.4,
+   "qmax": 50.0,
+   "qmin": -40.0,
+   "vset": 1.045,
+   "pmax": 140.0,
+   "pmin": 0.0,
+   "inService": true,
+   "fuel": "hydro",
+   "costC2": 0.25,
+   "costC1": 20.0,
+   "costC0": 0.0
+  },
+  {
+   "mrid": "G003",
+   "name": "Generator 3 @bus 3",
+   "node": "CN-G003",
+   "p": 0.0,
+   "q": 23.4,
+   "qmax": 40.0,
+   "qmin": 0.0,
+   "vset": 1.01,
+   "pmax": 100.0,
+   "pmin": 0.0,
+   "inService": true,
+   "fuel": "gas",
+   "costC2": 0.01,
+   "costC1": 40.0,
+   "costC0": 0.0
+  },
+  {
+   "mrid": "G004",
+   "name": "Generator 4 @bus 6",
+   "node": "CN-G004",
+   "p": 0.0,
+   "q": 12.2,
+   "qmax": 24.0,
+   "qmin": -6.0,
+   "vset": 1.07,
+   "pmax": 100.0,
+   "pmin": 0.0,
+   "inService": true,
+   "fuel": "solar",
+   "costC2": 0.01,
+   "costC1": 40.0,
+   "costC0": 0.0
+  },
+  {
+   "mrid": "G005",
+   "name": "Generator 5 @bus 8",
+   "node": "CN-G005",
+   "p": 0.0,
+   "q": 17.4,
+   "qmax": 24.0,
+   "qmin": -6.0,
+   "vset": 1.09,
+   "pmax": 100.0,
+   "pmin": 0.0,
+   "inService": true,
+   "fuel": "wind",
+   "costC2": 0.01,
+   "costC1": 40.0,
+   "costC0": 0.0
+  }
+ ],
+ "loads": [
+  {
+   "mrid": "L0002",
+   "name": "Load @bus 2",
+   "node": "CN-L0002",
+   "p": 21.7,
+   "q": 12.7
+  },
+  {
+   "mrid": "L0003",
+   "name": "Load @bus 3",
+   "node": "CN-L0003",
+   "p": 94.2,
+   "q": 19.0
+  },
+  {
+   "mrid": "L0004",
+   "name": "Load @bus 4",
+   "node": "CN-L0004",
+   "p": 47.8,
+   "q": -3.9
+  },
+  {
+   "mrid": "L0005",
+   "name": "Load @bus 5",
+   "node": "CN-L0005",
+   "p": 7.6,
+   "q": 1.6
+  },
+  {
+   "mrid": "L0006",
+   "name": "Load @bus 6",
+   "node": "CN-L0006",
+   "p": 11.2,
+   "q": 7.5
+  },
+  {
+   "mrid": "L0009",
+   "name": "Load @bus 9",
+   "node": "CN-L0009",
+   "p": 29.5,
+   "q": 16.6
+  },
+  {
+   "mrid": "L0010",
+   "name": "Load @bus 10",
+   "node": "CN-L0010",
+   "p": 9.0,
+   "q": 5.8
+  },
+  {
+   "mrid": "L0011",
+   "name": "Load @bus 11",
+   "node": "CN-L0011",
+   "p": 3.5,
+   "q": 1.8
+  },
+  {
+   "mrid": "L0012",
+   "name": "Load @bus 12",
+   "node": "CN-L0012",
+   "p": 6.1,
+   "q": 1.6
+  },
+  {
+   "mrid": "L0013",
+   "name": "Load @bus 13",
+   "node": "CN-L0013",
+   "p": 13.5,
+   "q": 5.8
+  },
+  {
+   "mrid": "L0014",
+   "name": "Load @bus 14",
+   "node": "CN-L0014",
+   "p": 14.9,
+   "q": 5.0
+  }
+ ],
+ "shunts": [
+  {
+   "mrid": "SH0009",
+   "name": "Shunt @bus 9",
+   "node": "CN-SH0009",
+   "g": 0.0,
+   "b": 19.0
+  }
+ ],
+ "slackSubstation": "SS-0001"
+}

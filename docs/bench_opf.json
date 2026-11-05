@@ -1,0 +1,49 @@
+[
+ {
+  "buses": 118,
+  "branches": 186,
+  "gens": 54,
+  "grid_build_s": 0.003,
+  "one_lp_s": 0.217,
+  "opf_with_ac_verify_s": 0.09,
+  "opf_cost": 131291.87,
+  "opf_unserved_mw": 0.0,
+  "scopf_s": 4.31,
+  "scopf_iterations": 1,
+  "scopf_cuts": 107,
+  "scopf_cost_of_security": 15571.47,
+  "scopf_unserved_mw": 41.0,
+  "islanding_not_secured": 9,
+  "ac_n1": {
+   "secured": {
+    "cases": 186,
+    "cases_over_emergency": 28,
+    "worst_loading_pct": 203.6,
+    "nonconverged": 0
+   },
+   "unsecured": {
+    "cases": 186,
+    "cases_over_emergency": 61,
+    "worst_loading_pct": 540.8,
+    "nonconverged": 0
+   }
+  }
+ },
+ {
+  "buses": 1062,
+  "branches": 1698,
+  "gens": 486,
+  "grid_build_s": 0.205,
+  "one_lp_s": 34.7,
+  "opf_with_ac_verify_s": 9.42,
+  "opf_cost": 1198212.46,
+  "opf_unserved_mw": 34.851,
+  "scopf_s": 145.13,
+  "scopf_iterations": 1,
+  "scopf_cuts": 428,
+  "scopf_cost_of_security": 142422.54,
+  "scopf_unserved_mw": 369.0,
+  "islanding_not_secured": 81,
+  "ac_n1": null
+ }
+]

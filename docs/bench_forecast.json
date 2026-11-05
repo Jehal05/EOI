@@ -1,0 +1,206 @@
+[
+ {
+  "series": "load",
+  "days": 14,
+  "horizon_min": 60,
+  "runs": 8,
+  "cov80_mean": 0.806,
+  "cov80_min": 0.774,
+  "cov95_mean": 0.959,
+  "cov95_min": 0.942,
+  "skill_mean": 0.574,
+  "skill_min": 0.539,
+  "models": {
+   "ridge": 8
+  },
+  "seconds_per_forecast": 0.011
+ },
+ {
+  "series": "load",
+  "days": 14,
+  "horizon_min": 360,
+  "runs": 8,
+  "cov80_mean": 0.793,
+  "cov80_min": 0.732,
+  "cov95_mean": 0.95,
+  "cov95_min": 0.892,
+  "skill_mean": 0.787,
+  "skill_min": 0.758,
+  "models": {
+   "ridge": 8
+  },
+  "seconds_per_forecast": 0.036
+ },
+ {
+  "series": "load",
+  "days": 60,
+  "horizon_min": 60,
+  "runs": 8,
+  "cov80_mean": 0.809,
+  "cov80_min": 0.793,
+  "cov95_mean": 0.955,
+  "cov95_min": 0.944,
+  "skill_mean": 0.576,
+  "skill_min": 0.568,
+  "models": {
+   "ridge": 8
+  },
+  "seconds_per_forecast": 0.051
+ },
+ {
+  "series": "load",
+  "days": 60,
+  "horizon_min": 360,
+  "runs": 8,
+  "cov80_mean": 0.824,
+  "cov80_min": 0.779,
+  "cov95_mean": 0.959,
+  "cov95_min": 0.948,
+  "skill_mean": 0.816,
+  "skill_min": 0.808,
+  "models": {
+   "ridge": 8
+  },
+  "seconds_per_forecast": 0.194
+ },
+ {
+  "series": "solar",
+  "days": 14,
+  "horizon_min": 60,
+  "runs": 8,
+  "cov80_mean": 0.807,
+  "cov80_min": 0.804,
+  "cov95_mean": 0.936,
+  "cov95_min": 0.935,
+  "skill_mean": 0.377,
+  "skill_min": 0.299,
+  "models": {
+   "ridge": 8
+  },
+  "seconds_per_forecast": 0.012
+ },
+ {
+  "series": "solar",
+  "days": 14,
+  "horizon_min": 360,
+  "runs": 8,
+  "cov80_mean": 0.799,
+  "cov80_min": 0.79,
+  "cov95_mean": 0.937,
+  "cov95_min": 0.918,
+  "skill_mean": 0.705,
+  "skill_min": 0.622,
+  "models": {
+   "ridge": 8
+  },
+  "seconds_per_forecast": 0.047
+ },
+ {
+  "series": "solar",
+  "days": 60,
+  "horizon_min": 60,
+  "runs": 8,
+  "cov80_mean": 0.802,
+  "cov80_min": 0.801,
+  "cov95_mean": 0.952,
+  "cov95_min": 0.95,
+  "skill_mean": 0.369,
+  "skill_min": 0.313,
+  "models": {
+   "ridge": 8
+  },
+  "seconds_per_forecast": 0.048
+ },
+ {
+  "series": "solar",
+  "days": 60,
+  "horizon_min": 360,
+  "runs": 8,
+  "cov80_mean": 0.804,
+  "cov80_min": 0.791,
+  "cov95_mean": 0.949,
+  "cov95_min": 0.927,
+  "skill_mean": 0.718,
+  "skill_min": 0.668,
+  "models": {
+   "ridge": 8
+  },
+  "seconds_per_forecast": 0.185
+ },
+ {
+  "series": "wind",
+  "days": 14,
+  "horizon_min": 60,
+  "runs": 8,
+  "cov80_mean": 0.817,
+  "cov80_min": 0.761,
+  "cov95_mean": 0.944,
+  "cov95_min": 0.926,
+  "skill_mean": 0.0,
+  "skill_min": 0.0,
+  "models": {
+   "persistence": 8
+  },
+  "seconds_per_forecast": 0.01
+ },
+ {
+  "series": "wind",
+  "days": 14,
+  "horizon_min": 360,
+  "runs": 8,
+  "cov80_mean": 0.775,
+  "cov80_min": 0.644,
+  "cov95_mean": 0.918,
+  "cov95_min": 0.814,
+  "skill_mean": -0.009,
+  "skill_min": -0.074,
+  "models": {
+   "ridge": 1,
+   "persistence": 7
+  },
+  "seconds_per_forecast": 0.042
+ },
+ {
+  "series": "wind",
+  "days": 60,
+  "horizon_min": 60,
+  "runs": 8,
+  "cov80_mean": 0.788,
+  "cov80_min": 0.692,
+  "cov95_mean": 0.95,
+  "cov95_min": 0.939,
+  "skill_mean": 0.0,
+  "skill_min": 0.0,
+  "models": {
+   "persistence": 8
+  },
+  "seconds_per_forecast": 0.044
+ },
+ {
+  "series": "wind",
+  "days": 60,
+  "horizon_min": 360,
+  "runs": 8,
+  "cov80_mean": 0.802,
+  "cov80_min": 0.75,
+  "cov95_mean": 0.957,
+  "cov95_min": 0.946,
+  "skill_mean": 0.0,
+  "skill_min": 0.0,
+  "models": {
+   "persistence": 8
+  },
+  "seconds_per_forecast": 0.182
+ },
+ {
+  "series": "load",
+  "days": 365,
+  "samples": 105120,
+  "seconds_per_forecast": 1.32
+ },
+ {
+  "note": "1,000 series x 14 days, extrapolated from 100 measured runs",
+  "seconds_per_forecast": 0.018,
+  "fleet_1000_serial_s": 18.4
+ }
+]

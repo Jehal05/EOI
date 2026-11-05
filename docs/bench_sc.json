@@ -1,0 +1,30 @@
+[
+ {
+  "buses": 118,
+  "branches": 186,
+  "all_bus_seconds": 0.007,
+  "buses_analysed": 118,
+  "max_ik_ka": 60.4
+ },
+ {
+  "buses": 1062,
+  "branches": 1698,
+  "all_bus_seconds": 0.176,
+  "buses_analysed": 1062,
+  "max_ik_ka": 89.6
+ },
+ {
+  "buses": 5074,
+  "branches": 8124,
+  "all_bus_seconds": 4.049,
+  "buses_analysed": 5074,
+  "max_ik_ka": 110.3
+ },
+ {
+  "buses": 10030,
+  "branches": 16062,
+  "all_bus_seconds": 17.235,
+  "buses_analysed": 10030,
+  "max_ik_ka": 112.1
+ }
+]

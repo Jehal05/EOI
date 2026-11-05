@@ -1,0 +1,6 @@
+apiVersion: v2
+name: gridsovereign
+description: Reference deployment of the GridSovereign control-centre prototype (3-node core, Postgres historian, Redis Streams bus). Not run against a cluster in the build environment.
+type: application
+version: 0.1.0
+appVersion: "0.1.0"

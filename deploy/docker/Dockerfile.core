@@ -1,0 +1,13 @@
+# scada-core (Java 21, no third-party libraries). Build context: repository root.
+FROM eclipse-temurin:21-jdk AS build
+WORKDIR /src
+COPY services/scada-core services/scada-core
+RUN cd services/scada-core && ./build.sh
+FROM eclipse-temurin:21-jre
+RUN useradd -r -u 10001 gs && mkdir -p /data && chown gs /data
+COPY --from=build /src/services/scada-core/out /opt/core
+COPY ui/dist /opt/ui
+USER 10001
+VOLUME /data
+EXPOSE 8083
+ENTRYPOINT ["java","-XX:+UseZGC","-Xmx1g","-cp","/opt/core","gs.core.Main","-ui","/opt/ui","-data","/data"]

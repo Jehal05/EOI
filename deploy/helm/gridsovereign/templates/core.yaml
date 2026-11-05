@@ -1,0 +1,73 @@
+apiVersion: v1
+kind: Service
+metadata: { name: gs-core, labels: { app: gs-core } }
+spec:
+  clusterIP: None                 # headless: stable per-pod DNS names gs-core-0.gs-core ...
+  publishNotReadyAddresses: true  # peers must find each other before any is ready
+  selector: { app: gs-core }
+  ports: [{ name: http, port: 8083 }]
+---
+apiVersion: v1
+kind: Service
+metadata: { name: gs-core-api }
+spec:
+  selector: { app: gs-core }
+  ports: [{ name: http, port: 8083 }]
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata: { name: gs-core }
+spec:
+  serviceName: gs-core
+  replicas: {{ .Values.core.replicas }}
+  podManagementPolicy: Parallel
+  selector: { matchLabels: { app: gs-core } }
+  template:
+    metadata: { labels: { app: gs-core } }
+    spec:
+      {{- include "gs.podSecurity" . | nindent 6 }}
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - { topologyKey: kubernetes.io/hostname, labelSelector: { matchLabels: { app: gs-core } } }
+      containers:
+        - name: core
+          image: {{ include "gs.image" (dict "root" . "name" "core") }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- include "gs.containerSecurity" . | nindent 10 }}
+          # node id = pod ordinal; the signing key for this node is core-<ordinal>.tokkey
+          command: ["/bin/sh", "-c"]
+          args:
+            - |
+              ID="${HOSTNAME##*-}"; PEERS=""
+              i=0; while [ "$i" -lt {{ .Values.core.replicas }} ]; do
+                [ "$i" != "$ID" ] && PEERS="$PEERS -peer $i=http://gs-core-$i.gs-core:8083"; i=$((i+1)); done
+              export GS_TOKEN_KEY=/run/secrets/gs/core-$ID.tokkey
+              exec java -XX:+UseZGC -Xmx1g -cp /opt/core gs.core.Main -ui /opt/ui -data /data -id "$ID" -listen 0.0.0.0:8083 -bus {{ .Values.redis.url }} $PEERS
+          env:
+            - { name: GS_TOKEN_TRUST, value: /run/secrets/gs/trust.json }
+            - { name: GS_SECRET_FILE, value: /run/secrets/gs/audit.key }
+            - { name: CIM_URL, value: "http://gs-cimpds:8081" }
+            - { name: EMS_URL, value: "http://gs-ems:8082" }
+            - { name: FEP_URL, value: "http://gs-fep:8084" }
+          ports: [{ containerPort: 8083 }]
+          readinessProbe: { httpGet: { path: /health, port: 8083 }, periodSeconds: 5 }
+          livenessProbe: { httpGet: { path: /health, port: 8083 }, periodSeconds: 10, failureThreshold: 6 }
+          resources: {{- toYaml .Values.core.resources | nindent 12 }}
+          volumeMounts:
+            - { name: data, mountPath: /data }
+            - { name: secrets, mountPath: /run/secrets/gs, readOnly: true }
+            - { name: tmp, mountPath: /tmp }
+      volumes:
+        - { name: secrets, secret: { secretName: {{ .Values.secrets.existingSecret }}, defaultMode: 0400 } }
+        - { name: tmp, emptyDir: {} }
+  volumeClaimTemplates:
+    - metadata: { name: data }
+      spec: { accessModes: [ReadWriteOnce], resources: { requests: { storage: {{ .Values.core.storage }} } } }
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: { name: gs-core }
+spec:
+  maxUnavailable: 1               # never drain two of three nodes at once (quorum)
+  selector: { matchLabels: { app: gs-core } }

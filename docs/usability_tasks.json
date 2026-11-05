@@ -1,0 +1,8 @@
+{"note":"Task script for a usability session with real dispatchers. api_check is a state check used to confirm a task can be completed on the stack; it is not a measure of the participant.",
+ "tasks":[
+ {"id":"T1","title":"Find the most severe active alarm and acknowledge it","prompt":"An alarm needs attention. Find the most severe one and acknowledge it.","success":"alarm shows acknowledged","target_seconds":45,"api_check":{"path":"/api/alarms","expect":"["}},
+ {"id":"T2","title":"Open the single-line diagram for a substation and read a breaker state","prompt":"Tell me whether the first breaker of any substation is open or closed.","success":"correct state reported","target_seconds":60,"api_check":{"path":"/api/state","expect":"{"}},
+ {"id":"T3","title":"Run an N-1 contingency study and name the worst case","prompt":"Which single outage is the most severe?","success":"correct element named","target_seconds":90,"api_check":{"path":"/health","expect":"ok"}},
+ {"id":"T4","title":"Switch the interface to Hindi and the dark theme","prompt":"Change the language and the theme.","success":"UI shows Hindi labels and chosen theme","target_seconds":30,"api_check":{"path":"/health","expect":"ok"}},
+ {"id":"T5","title":"Issue a breaker command with the required confirmation","prompt":"Open the named breaker, following whatever the system asks of you.","success":"command executed and in the audit log","target_seconds":90,"api_check":{"path":"/health","expect":"ok"}},
+ {"id":"T6","title":"Write a shift-handover note","prompt":"Leave a note for the next shift saying one line is out for maintenance.","success":"note visible in the logbook","target_seconds":60,"api_check":{"path":"/health","expect":"ok"}}]}

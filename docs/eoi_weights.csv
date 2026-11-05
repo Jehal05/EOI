@@ -1,0 +1,25 @@
+criterion,weight,requirement_ids,credit_met,credit_partial,credit_not_built
+# The EOI scoring rubric was NOT provided with the brief. Fill in the real criteria and weights (80% technical share) and the
+# credit you accept for 'partial'. Defaults below are placeholders with EQUAL weights over brief items; they are NOT the EOI's.
+Item 1,,ITEM-01,1.0,0.0,0.0
+Item 2,,ITEM-02,1.0,0.0,0.0
+Item 3,,ITEM-03,1.0,0.0,0.0
+Item 4,,ITEM-04,1.0,0.0,0.0
+Item 5,,ITEM-05,1.0,0.0,0.0
+Item 6,,ITEM-06,1.0,0.0,0.0
+Item 7,,ITEM-07,1.0,0.0,0.0
+Item 8,,ITEM-08,1.0,0.0,0.0
+Item 9,,ITEM-09,1.0,0.0,0.0
+Item 10,,ITEM-10,1.0,0.0,0.0
+Item 11,,ITEM-11,1.0,0.0,0.0
+Item 12,,ITEM-12,1.0,0.0,0.0
+Item 13,,ITEM-13,1.0,0.0,0.0
+Item 14,,ITEM-14,1.0,0.0,0.0
+Item 15,,ITEM-15,1.0,0.0,0.0
+Item 16,,ITEM-16,1.0,0.0,0.0
+Item 17,,ITEM-17,1.0,0.0,0.0
+Item 18,,ITEM-18,1.0,0.0,0.0
+Item 19,,ITEM-19,1.0,0.0,0.0
+Item 20,,ITEM-20,1.0,0.0,0.0
+Item 21,,ITEM-21,1.0,0.0,0.0
+Item 22,,ITEM-22,1.0,0.0,0.0

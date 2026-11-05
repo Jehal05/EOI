@@ -1,0 +1,22 @@
+[
+ {
+  "buses": 118,
+  "branches": 186,
+  "all_pairs": 17205,
+  "candidates": 1319,
+  "ac_verified": 81,
+  "dc_build_s": 0.0119,
+  "dc_screen_s": 0.0084,
+  "total_wall_s": 1.151
+ },
+ {
+  "buses": 1062,
+  "branches": 1698,
+  "all_pairs": 1440753,
+  "candidates": 6233,
+  "ac_verified": 120,
+  "dc_build_s": 0.0281,
+  "dc_screen_s": 0.6715,
+  "total_wall_s": 2.183
+ }
+]

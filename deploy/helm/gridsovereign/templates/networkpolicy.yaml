@@ -1,0 +1,20 @@
+{{- if .Values.networkPolicy.enabled }}
+# default deny, then: the core nodes talk to each other, the FEP/EMS/historian/cim-pds talk to the core and cim-pds
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: { name: default-deny-ingress }
+spec: { podSelector: {}, policyTypes: [Ingress] }
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: { name: core-from-platform }
+spec:
+  podSelector: { matchLabels: { app: gs-core } }
+  policyTypes: [Ingress]
+  ingress:
+    - from:
+        {{- range $a := list "gs-core" "gs-fep" "gs-ems" "gs-historian" }}
+        - podSelector: { matchLabels: { app: {{ $a }} } }
+        {{- end }}
+      ports: [{ port: 8083 }]
+{{- end }}

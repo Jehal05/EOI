@@ -1,0 +1,6127 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-11-05T09:08:14Z",
+  "component": {
+   "type": "application",
+   "name": "gridsovereign",
+   "version": "0.1.0"
+  },
+  "tools": [
+   {
+    "name": "tools/sbom.py"
+   }
+  ]
+ },
+ "components": [
+  {
+   "type": "library",
+   "name": "libc",
+   "version": "0.2.191",
+   "scope": "required",
+   "purl": "pkg:cargo/libc@0.2.191",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "sync_wrapper",
+   "version": "1.0.2",
+   "scope": "required",
+   "purl": "pkg:cargo/sync_wrapper@1.0.2",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "zeroize",
+   "version": "1.9.1",
+   "scope": "required",
+   "purl": "pkg:cargo/zeroize@1.9.1",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "httpdate",
+   "version": "1.0.3",
+   "scope": "required",
+   "purl": "pkg:cargo/httpdate@1.0.3",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tower",
+   "version": "0.5.3",
+   "scope": "required",
+   "purl": "pkg:cargo/tower@0.5.3",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "base64ct",
+   "version": "1.8.3",
+   "scope": "required",
+   "purl": "pkg:cargo/base64ct@1.8.3",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tower-http",
+   "version": "0.5.2",
+   "scope": "required",
+   "purl": "pkg:cargo/tower-http@0.5.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "serde_core",
+   "version": "1.0.229",
+   "scope": "required",
+   "purl": "pkg:cargo/serde_core@1.0.229",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "generic-array",
+   "version": "0.14.7",
+   "scope": "required",
+   "purl": "pkg:cargo/generic-array@0.14.7",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "hmac",
+   "version": "0.12.1",
+   "scope": "required",
+   "purl": "pkg:cargo/hmac@0.12.1",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "memchr",
+   "version": "2.8.3",
+   "scope": "required",
+   "purl": "pkg:cargo/memchr@2.8.3",
+   "licenses": [
+    {
+     "expression": "Unlicense OR MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "hex",
+   "version": "0.4.3",
+   "scope": "required",
+   "purl": "pkg:cargo/hex@0.4.3",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "socket2",
+   "version": "0.6.5",
+   "scope": "required",
+   "purl": "pkg:cargo/socket2@0.6.5",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "rand_core",
+   "version": "0.6.4",
+   "scope": "required",
+   "purl": "pkg:cargo/rand_core@0.6.4",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tracing-core",
+   "version": "0.1.36",
+   "scope": "required",
+   "purl": "pkg:cargo/tracing-core@0.1.36",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "rustc_version",
+   "version": "0.4.1",
+   "scope": "required",
+   "purl": "pkg:cargo/rustc_version@0.4.1",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "curve25519-dalek-derive",
+   "version": "0.1.1",
+   "scope": "required",
+   "purl": "pkg:cargo/curve25519-dalek-derive@0.1.1",
+   "licenses": [
+    {
+     "expression": "MIT/Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "syn",
+   "version": "2.0.119",
+   "scope": "required",
+   "purl": "pkg:cargo/syn@2.0.119",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "serde_urlencoded",
+   "version": "0.7.1",
+   "scope": "required",
+   "purl": "pkg:cargo/serde_urlencoded@0.7.1",
+   "licenses": [
+    {
+     "expression": "MIT/Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "serde_derive",
+   "version": "1.0.229",
+   "scope": "required",
+   "purl": "pkg:cargo/serde_derive@1.0.229",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "mio",
+   "version": "1.2.4",
+   "scope": "required",
+   "purl": "pkg:cargo/mio@1.2.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "ryu",
+   "version": "1.0.23",
+   "scope": "required",
+   "purl": "pkg:cargo/ryu@1.0.23",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR BSL-1.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "zmij",
+   "version": "1.0.23",
+   "scope": "required",
+   "purl": "pkg:cargo/zmij@1.0.23",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "block-buffer",
+   "version": "0.10.4",
+   "scope": "required",
+   "purl": "pkg:cargo/block-buffer@0.10.4",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "once_cell",
+   "version": "1.21.4",
+   "scope": "required",
+   "purl": "pkg:cargo/once_cell@1.21.4",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "futures-core",
+   "version": "0.3.34",
+   "scope": "required",
+   "purl": "pkg:cargo/futures-core@0.3.34",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "errno",
+   "version": "0.3.14",
+   "scope": "required",
+   "purl": "pkg:cargo/errno@0.3.14",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pin-project-lite",
+   "version": "0.2.17",
+   "scope": "required",
+   "purl": "pkg:cargo/pin-project-lite@0.2.17",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pkcs8",
+   "version": "0.10.2",
+   "scope": "required",
+   "purl": "pkg:cargo/pkcs8@0.10.2",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "mime",
+   "version": "0.3.17",
+   "scope": "required",
+   "purl": "pkg:cargo/mime@0.3.17",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tower-layer",
+   "version": "0.3.3",
+   "scope": "required",
+   "purl": "pkg:cargo/tower-layer@0.3.3",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "async-trait",
+   "version": "0.1.92",
+   "scope": "required",
+   "purl": "pkg:cargo/async-trait@0.1.92",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "typenum",
+   "version": "1.20.1",
+   "scope": "required",
+   "purl": "pkg:cargo/typenum@1.20.1",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "semver",
+   "version": "1.0.28",
+   "scope": "required",
+   "purl": "pkg:cargo/semver@1.0.28",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "httparse",
+   "version": "1.10.1",
+   "scope": "required",
+   "purl": "pkg:cargo/httparse@1.10.1",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "cfg-if",
+   "version": "1.0.5",
+   "scope": "required",
+   "purl": "pkg:cargo/cfg-if@1.0.5",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "sha2",
+   "version": "0.10.9",
+   "scope": "required",
+   "purl": "pkg:cargo/sha2@0.10.9",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "getrandom",
+   "version": "0.2.17",
+   "scope": "required",
+   "purl": "pkg:cargo/getrandom@0.2.17",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "http-body",
+   "version": "1.1.0",
+   "scope": "required",
+   "purl": "pkg:cargo/http-body@1.1.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "digest",
+   "version": "0.10.7",
+   "scope": "required",
+   "purl": "pkg:cargo/digest@0.10.7",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "matchit",
+   "version": "0.7.3",
+   "scope": "required",
+   "purl": "pkg:cargo/matchit@0.7.3",
+   "licenses": [
+    {
+     "expression": "MIT AND BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "futures-task",
+   "version": "0.3.34",
+   "scope": "required",
+   "purl": "pkg:cargo/futures-task@0.3.34",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "http",
+   "version": "1.5.0",
+   "scope": "required",
+   "purl": "pkg:cargo/http@1.5.0",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "serde_json",
+   "version": "1.0.154",
+   "scope": "required",
+   "purl": "pkg:cargo/serde_json@1.0.154",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tokio-macros",
+   "version": "2.7.2",
+   "scope": "required",
+   "purl": "pkg:cargo/tokio-macros@2.7.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "futures-util",
+   "version": "0.3.34",
+   "scope": "required",
+   "purl": "pkg:cargo/futures-util@0.3.34",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "slab",
+   "version": "0.4.12",
+   "scope": "required",
+   "purl": "pkg:cargo/slab@0.4.12",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "ed25519-dalek",
+   "version": "2.2.0",
+   "scope": "required",
+   "purl": "pkg:cargo/ed25519-dalek@2.2.0",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "itoa",
+   "version": "1.0.18",
+   "scope": "required",
+   "purl": "pkg:cargo/itoa@1.0.18",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "signature",
+   "version": "2.2.0",
+   "scope": "required",
+   "purl": "pkg:cargo/signature@2.2.0",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "serde_path_to_error",
+   "version": "0.1.20",
+   "scope": "required",
+   "purl": "pkg:cargo/serde_path_to_error@0.1.20",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "form_urlencoded",
+   "version": "1.2.2",
+   "scope": "required",
+   "purl": "pkg:cargo/form_urlencoded@1.2.2",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "bytes",
+   "version": "1.12.1",
+   "scope": "required",
+   "purl": "pkg:cargo/bytes@1.12.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "percent-encoding",
+   "version": "2.3.2",
+   "scope": "required",
+   "purl": "pkg:cargo/percent-encoding@2.3.2",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "version_check",
+   "version": "0.9.5",
+   "scope": "required",
+   "purl": "pkg:cargo/version_check@0.9.5",
+   "licenses": [
+    {
+     "expression": "MIT/Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "syn",
+   "version": "3.0.9",
+   "scope": "required",
+   "purl": "pkg:cargo/syn@3.0.9",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "signal-hook-registry",
+   "version": "1.4.8",
+   "scope": "required",
+   "purl": "pkg:cargo/signal-hook-registry@1.4.8",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "curve25519-dalek",
+   "version": "4.1.3",
+   "scope": "required",
+   "purl": "pkg:cargo/curve25519-dalek@4.1.3",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "log",
+   "version": "0.4.35",
+   "scope": "required",
+   "purl": "pkg:cargo/log@0.4.35",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "base64",
+   "version": "0.22.1",
+   "scope": "required",
+   "purl": "pkg:cargo/base64@0.22.1",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "axum",
+   "version": "0.7.9",
+   "scope": "required",
+   "purl": "pkg:cargo/axum@0.7.9",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "quote",
+   "version": "1.0.47",
+   "scope": "required",
+   "purl": "pkg:cargo/quote@1.0.47",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "hyper",
+   "version": "1.12.0",
+   "scope": "required",
+   "purl": "pkg:cargo/hyper@1.12.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tower-service",
+   "version": "0.3.3",
+   "scope": "required",
+   "purl": "pkg:cargo/tower-service@0.3.3",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "crypto-common",
+   "version": "0.1.7",
+   "scope": "required",
+   "purl": "pkg:cargo/crypto-common@0.1.7",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "der",
+   "version": "0.7.10",
+   "scope": "required",
+   "purl": "pkg:cargo/der@0.7.10",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tokio",
+   "version": "1.54.1",
+   "scope": "required",
+   "purl": "pkg:cargo/tokio@1.54.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "rustversion",
+   "version": "1.0.23",
+   "scope": "required",
+   "purl": "pkg:cargo/rustversion@1.0.23",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "ed25519",
+   "version": "2.2.3",
+   "scope": "required",
+   "purl": "pkg:cargo/ed25519@2.2.3",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "serde",
+   "version": "1.0.229",
+   "scope": "required",
+   "purl": "pkg:cargo/serde@1.0.229",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "unicode-ident",
+   "version": "1.0.27",
+   "scope": "required",
+   "purl": "pkg:cargo/unicode-ident@1.0.27",
+   "licenses": [
+    {
+     "expression": "(MIT OR Apache-2.0) AND Unicode-3.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "hyper-util",
+   "version": "0.1.21",
+   "scope": "required",
+   "purl": "pkg:cargo/hyper-util@0.1.21",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "smallvec",
+   "version": "1.16.4",
+   "scope": "required",
+   "purl": "pkg:cargo/smallvec@1.16.4",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "http-body-util",
+   "version": "0.1.5",
+   "scope": "required",
+   "purl": "pkg:cargo/http-body-util@0.1.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "atomic-waker",
+   "version": "1.1.2",
+   "scope": "required",
+   "purl": "pkg:cargo/atomic-waker@1.1.2",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "spki",
+   "version": "0.7.3",
+   "scope": "required",
+   "purl": "pkg:cargo/spki@0.7.3",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "subtle",
+   "version": "2.6.1",
+   "scope": "required",
+   "purl": "pkg:cargo/subtle@2.6.1",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "bitflags",
+   "version": "2.13.2",
+   "scope": "required",
+   "purl": "pkg:cargo/bitflags@2.13.2",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tracing",
+   "version": "0.1.44",
+   "scope": "required",
+   "purl": "pkg:cargo/tracing@0.1.44",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "proc-macro2",
+   "version": "1.0.107",
+   "scope": "required",
+   "purl": "pkg:cargo/proc-macro2@1.0.107",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "const-oid",
+   "version": "0.9.6",
+   "scope": "required",
+   "purl": "pkg:cargo/const-oid@0.9.6",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "axum-core",
+   "version": "0.4.5",
+   "scope": "required",
+   "purl": "pkg:cargo/axum-core@0.4.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "cpufeatures",
+   "version": "0.2.17",
+   "scope": "required",
+   "purl": "pkg:cargo/cpufeatures@0.2.17",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "cargo"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/code-frame",
+   "version": "7.29.7",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/code-frame@7.29.7",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/compat-data",
+   "version": "7.29.7",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/compat-data@7.29.7",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/core",
+   "version": "7.29.7",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/core@7.29.7",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/generator",
+   "version": "7.29.12",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/generator@7.29.12",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/helper-compilation-targets",
+   "version": "7.29.7",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/helper-compilation-targets@7.29.7",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/helper-globals",
+   "version": "7.29.7",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/helper-globals@7.29.7",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/helper-module-imports",
+   "version": "7.29.7",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/helper-module-imports@7.29.7",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/helper-module-transforms",
+   "version": "7.29.7",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/helper-module-transforms@7.29.7",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/helper-plugin-utils",
+   "version": "7.29.7",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/helper-plugin-utils@7.29.7",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/helper-string-parser",
+   "version": "7.29.11",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/helper-string-parser@7.29.11",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/helper-validator-identifier",
+   "version": "7.29.7",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/helper-validator-identifier@7.29.7",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/helper-validator-option",
+   "version": "7.29.7",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/helper-validator-option@7.29.7",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/helpers",
+   "version": "7.29.10",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/helpers@7.29.10",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/parser",
+   "version": "7.29.12",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/parser@7.29.12",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/plugin-transform-react-jsx-self",
+   "version": "7.29.7",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/plugin-transform-react-jsx-self@7.29.7",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/plugin-transform-react-jsx-source",
+   "version": "7.29.7",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/plugin-transform-react-jsx-source@7.29.7",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/template",
+   "version": "7.29.7",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/template@7.29.7",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/traverse",
+   "version": "7.29.12",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/traverse@7.29.12",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@babel/types",
+   "version": "7.29.11",
+   "scope": "optional",
+   "purl": "pkg:npm/@babel/types@7.29.11",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/aix-ppc64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/aix-ppc64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/android-arm",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/android-arm@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/android-arm64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/android-arm64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/android-x64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/android-x64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/darwin-arm64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/darwin-arm64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/darwin-x64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/darwin-x64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/freebsd-arm64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/freebsd-arm64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/freebsd-x64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/freebsd-x64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/linux-arm",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/linux-arm@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/linux-arm64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/linux-arm64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/linux-ia32",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/linux-ia32@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/linux-loong64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/linux-loong64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/linux-mips64el",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/linux-mips64el@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/linux-ppc64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/linux-ppc64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/linux-riscv64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/linux-riscv64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/linux-s390x",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/linux-s390x@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/linux-x64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/linux-x64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/netbsd-x64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/netbsd-x64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/openbsd-x64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/openbsd-x64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/sunos-x64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/sunos-x64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/win32-arm64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/win32-arm64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/win32-ia32",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/win32-ia32@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@esbuild/win32-x64",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@esbuild/win32-x64@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@fontsource/ibm-plex-mono",
+   "version": "5.1.0",
+   "scope": "required",
+   "purl": "pkg:npm/@fontsource/ibm-plex-mono@5.1.0",
+   "licenses": [
+    {
+     "expression": "OFL-1.1"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "review"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@fontsource/ibm-plex-sans",
+   "version": "5.1.0",
+   "scope": "required",
+   "purl": "pkg:npm/@fontsource/ibm-plex-sans@5.1.0",
+   "licenses": [
+    {
+     "expression": "OFL-1.1"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "review"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@fontsource/noto-sans-devanagari",
+   "version": "5.1.0",
+   "scope": "required",
+   "purl": "pkg:npm/@fontsource/noto-sans-devanagari@5.1.0",
+   "licenses": [
+    {
+     "expression": "OFL-1.1"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "review"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@jridgewell/gen-mapping",
+   "version": "0.3.13",
+   "scope": "optional",
+   "purl": "pkg:npm/@jridgewell/gen-mapping@0.3.13",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@jridgewell/remapping",
+   "version": "2.3.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@jridgewell/remapping@2.3.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@jridgewell/resolve-uri",
+   "version": "3.1.2",
+   "scope": "optional",
+   "purl": "pkg:npm/@jridgewell/resolve-uri@3.1.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@jridgewell/sourcemap-codec",
+   "version": "1.6.0",
+   "scope": "optional",
+   "purl": "pkg:npm/@jridgewell/sourcemap-codec@1.6.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@jridgewell/trace-mapping",
+   "version": "0.3.31",
+   "scope": "optional",
+   "purl": "pkg:npm/@jridgewell/trace-mapping@0.3.31",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@napi-rs/lzma-linux-x64-gnu",
+   "version": "1.5.1",
+   "scope": "optional",
+   "purl": "pkg:npm/@napi-rs/lzma-linux-x64-gnu@1.5.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-android-arm-eabi",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-android-arm-eabi@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-android-arm64",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-android-arm64@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-android-x64",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-android-x64@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-darwin-arm64",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-darwin-arm64@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-darwin-x64",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-darwin-x64@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-freebsd-arm64",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-freebsd-arm64@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-freebsd-x64",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-freebsd-x64@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-linux-arm-gnueabihf",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-linux-arm-gnueabihf@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-linux-arm-musleabihf",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-linux-arm-musleabihf@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-linux-arm64-gnu",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-linux-arm64-gnu@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-linux-arm64-musl",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-linux-arm64-musl@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-linux-loong64-gnu",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-linux-loong64-gnu@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-linux-loong64-musl",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-linux-loong64-musl@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-linux-ppc64-gnu",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-linux-ppc64-gnu@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-linux-ppc64-musl",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-linux-ppc64-musl@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-linux-riscv64-gnu",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-linux-riscv64-gnu@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-linux-riscv64-musl",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-linux-riscv64-musl@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-linux-s390x-gnu",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-linux-s390x-gnu@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-linux-x64-gnu",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-linux-x64-gnu@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-linux-x64-musl",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-linux-x64-musl@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-openbsd-x64",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-openbsd-x64@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-openharmony-arm64",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-openharmony-arm64@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-win32-arm64-msvc",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-win32-arm64-msvc@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-win32-ia32-msvc",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-win32-ia32-msvc@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-win32-x64-gnu",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-win32-x64-gnu@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@rollup/rollup-win32-x64-msvc",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@rollup/rollup-win32-x64-msvc@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@types/babel__core",
+   "version": "7.20.5",
+   "scope": "optional",
+   "purl": "pkg:npm/@types/babel__core@7.20.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@types/babel__generator",
+   "version": "7.27.0",
+   "scope": "optional",
+   "purl": "pkg:npm/@types/babel__generator@7.27.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@types/babel__template",
+   "version": "7.4.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@types/babel__template@7.4.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@types/babel__traverse",
+   "version": "7.28.0",
+   "scope": "optional",
+   "purl": "pkg:npm/@types/babel__traverse@7.28.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@types/estree",
+   "version": "1.0.10",
+   "scope": "optional",
+   "purl": "pkg:npm/@types/estree@1.0.10",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@types/node",
+   "version": "22.9.0",
+   "scope": "optional",
+   "purl": "pkg:npm/@types/node@22.9.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@types/prop-types",
+   "version": "15.7.15",
+   "scope": "optional",
+   "purl": "pkg:npm/@types/prop-types@15.7.15",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@types/react",
+   "version": "18.3.12",
+   "scope": "optional",
+   "purl": "pkg:npm/@types/react@18.3.12",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@types/react-dom",
+   "version": "18.3.1",
+   "scope": "optional",
+   "purl": "pkg:npm/@types/react-dom@18.3.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@vitejs/plugin-react",
+   "version": "4.3.3",
+   "scope": "optional",
+   "purl": "pkg:npm/@vitejs/plugin-react@4.3.3",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@vitest/expect",
+   "version": "2.1.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@vitest/expect@2.1.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@vitest/mocker",
+   "version": "2.1.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@vitest/mocker@2.1.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@vitest/pretty-format",
+   "version": "2.1.9",
+   "scope": "optional",
+   "purl": "pkg:npm/@vitest/pretty-format@2.1.9",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@vitest/runner",
+   "version": "2.1.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@vitest/runner@2.1.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@vitest/snapshot",
+   "version": "2.1.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@vitest/snapshot@2.1.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@vitest/pretty-format",
+   "version": "2.1.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@vitest/pretty-format@2.1.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@vitest/spy",
+   "version": "2.1.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@vitest/spy@2.1.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@vitest/utils",
+   "version": "2.1.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@vitest/utils@2.1.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@vitest/pretty-format",
+   "version": "2.1.4",
+   "scope": "optional",
+   "purl": "pkg:npm/@vitest/pretty-format@2.1.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "assertion-error",
+   "version": "2.0.1",
+   "scope": "optional",
+   "purl": "pkg:npm/assertion-error@2.0.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "axe-core",
+   "version": "4.10.2",
+   "scope": "optional",
+   "purl": "pkg:npm/axe-core@4.10.2",
+   "licenses": [
+    {
+     "expression": "MPL-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "review"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "baseline-browser-mapping",
+   "version": "2.11.35",
+   "scope": "optional",
+   "purl": "pkg:npm/baseline-browser-mapping@2.11.35",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "browserslist",
+   "version": "4.29.5",
+   "scope": "optional",
+   "purl": "pkg:npm/browserslist@4.29.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "cac",
+   "version": "6.7.14",
+   "scope": "optional",
+   "purl": "pkg:npm/cac@6.7.14",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "caniuse-lite",
+   "version": "1.0.30001820",
+   "scope": "optional",
+   "purl": "pkg:npm/caniuse-lite@1.0.30001820",
+   "licenses": [
+    {
+     "expression": "CC-BY-4.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "chai",
+   "version": "5.3.3",
+   "scope": "optional",
+   "purl": "pkg:npm/chai@5.3.3",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "check-error",
+   "version": "2.1.3",
+   "scope": "optional",
+   "purl": "pkg:npm/check-error@2.1.3",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "convert-source-map",
+   "version": "2.0.0",
+   "scope": "optional",
+   "purl": "pkg:npm/convert-source-map@2.0.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "csstype",
+   "version": "3.2.3",
+   "scope": "optional",
+   "purl": "pkg:npm/csstype@3.2.3",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "debug",
+   "version": "4.4.3",
+   "scope": "optional",
+   "purl": "pkg:npm/debug@4.4.3",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "deep-eql",
+   "version": "5.0.2",
+   "scope": "optional",
+   "purl": "pkg:npm/deep-eql@5.0.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "electron-to-chromium",
+   "version": "1.5.473",
+   "scope": "optional",
+   "purl": "pkg:npm/electron-to-chromium@1.5.473",
+   "licenses": [
+    {
+     "expression": "ISC"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "esbuild",
+   "version": "0.21.5",
+   "scope": "optional",
+   "purl": "pkg:npm/esbuild@0.21.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "escalade",
+   "version": "3.2.0",
+   "scope": "optional",
+   "purl": "pkg:npm/escalade@3.2.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "estree-walker",
+   "version": "3.0.3",
+   "scope": "optional",
+   "purl": "pkg:npm/estree-walker@3.0.3",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "expect-type",
+   "version": "1.4.0",
+   "scope": "optional",
+   "purl": "pkg:npm/expect-type@1.4.0",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "fsevents",
+   "version": "2.3.3",
+   "scope": "optional",
+   "purl": "pkg:npm/fsevents@2.3.3",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "gensync",
+   "version": "1.0.0-beta.2",
+   "scope": "optional",
+   "purl": "pkg:npm/gensync@1.0.0-beta.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "js-tokens",
+   "version": "4.0.0",
+   "scope": "required",
+   "purl": "pkg:npm/js-tokens@4.0.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "jsesc",
+   "version": "3.1.0",
+   "scope": "optional",
+   "purl": "pkg:npm/jsesc@3.1.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "json5",
+   "version": "2.2.3",
+   "scope": "optional",
+   "purl": "pkg:npm/json5@2.2.3",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "loose-envify",
+   "version": "1.4.0",
+   "scope": "required",
+   "purl": "pkg:npm/loose-envify@1.4.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "loupe",
+   "version": "3.2.1",
+   "scope": "optional",
+   "purl": "pkg:npm/loupe@3.2.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "lru-cache",
+   "version": "5.1.1",
+   "scope": "optional",
+   "purl": "pkg:npm/lru-cache@5.1.1",
+   "licenses": [
+    {
+     "expression": "ISC"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "magic-string",
+   "version": "0.30.21",
+   "scope": "optional",
+   "purl": "pkg:npm/magic-string@0.30.21",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "ms",
+   "version": "2.1.3",
+   "scope": "optional",
+   "purl": "pkg:npm/ms@2.1.3",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "nanoid",
+   "version": "3.3.20",
+   "scope": "optional",
+   "purl": "pkg:npm/nanoid@3.3.20",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "node-releases",
+   "version": "2.0.63",
+   "scope": "optional",
+   "purl": "pkg:npm/node-releases@2.0.63",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pathe",
+   "version": "1.1.2",
+   "scope": "optional",
+   "purl": "pkg:npm/pathe@1.1.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pathval",
+   "version": "2.0.1",
+   "scope": "optional",
+   "purl": "pkg:npm/pathval@2.0.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "picocolors",
+   "version": "1.1.1",
+   "scope": "optional",
+   "purl": "pkg:npm/picocolors@1.1.1",
+   "licenses": [
+    {
+     "expression": "ISC"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "postcss",
+   "version": "8.5.32",
+   "scope": "optional",
+   "purl": "pkg:npm/postcss@8.5.32",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "react",
+   "version": "18.3.1",
+   "scope": "required",
+   "purl": "pkg:npm/react@18.3.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "react-dom",
+   "version": "18.3.1",
+   "scope": "required",
+   "purl": "pkg:npm/react-dom@18.3.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "react-refresh",
+   "version": "0.14.2",
+   "scope": "optional",
+   "purl": "pkg:npm/react-refresh@0.14.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "rollup",
+   "version": "4.67.4",
+   "scope": "optional",
+   "purl": "pkg:npm/rollup@4.67.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "scheduler",
+   "version": "0.23.2",
+   "scope": "required",
+   "purl": "pkg:npm/scheduler@0.23.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "semver",
+   "version": "6.3.2",
+   "scope": "optional",
+   "purl": "pkg:npm/semver@6.3.2",
+   "licenses": [
+    {
+     "expression": "ISC"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "siginfo",
+   "version": "2.0.0",
+   "scope": "optional",
+   "purl": "pkg:npm/siginfo@2.0.0",
+   "licenses": [
+    {
+     "expression": "ISC"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "source-map-js",
+   "version": "1.2.2",
+   "scope": "optional",
+   "purl": "pkg:npm/source-map-js@1.2.2",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "stackback",
+   "version": "0.0.2",
+   "scope": "optional",
+   "purl": "pkg:npm/stackback@0.0.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "std-env",
+   "version": "3.10.0",
+   "scope": "optional",
+   "purl": "pkg:npm/std-env@3.10.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tinybench",
+   "version": "2.9.0",
+   "scope": "optional",
+   "purl": "pkg:npm/tinybench@2.9.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tinyexec",
+   "version": "0.3.2",
+   "scope": "optional",
+   "purl": "pkg:npm/tinyexec@0.3.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tinypool",
+   "version": "1.1.1",
+   "scope": "optional",
+   "purl": "pkg:npm/tinypool@1.1.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tinyrainbow",
+   "version": "1.2.0",
+   "scope": "optional",
+   "purl": "pkg:npm/tinyrainbow@1.2.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tinyspy",
+   "version": "3.0.2",
+   "scope": "optional",
+   "purl": "pkg:npm/tinyspy@3.0.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "typescript",
+   "version": "5.6.3",
+   "scope": "optional",
+   "purl": "pkg:npm/typescript@5.6.3",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "undici-types",
+   "version": "6.19.8",
+   "scope": "optional",
+   "purl": "pkg:npm/undici-types@6.19.8",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "update-browserslist-db",
+   "version": "1.3.4",
+   "scope": "optional",
+   "purl": "pkg:npm/update-browserslist-db@1.3.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "vite",
+   "version": "5.4.10",
+   "scope": "optional",
+   "purl": "pkg:npm/vite@5.4.10",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "vite-node",
+   "version": "2.1.4",
+   "scope": "optional",
+   "purl": "pkg:npm/vite-node@2.1.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "vitest",
+   "version": "2.1.4",
+   "scope": "optional",
+   "purl": "pkg:npm/vitest@2.1.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "why-is-node-running",
+   "version": "2.3.0",
+   "scope": "optional",
+   "purl": "pkg:npm/why-is-node-running@2.3.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "yallist",
+   "version": "3.1.1",
+   "scope": "optional",
+   "purl": "pkg:npm/yallist@3.1.1",
+   "licenses": [
+    {
+     "expression": "ISC"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "npm"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "annotated-doc",
+   "version": "0.0.5",
+   "scope": "required",
+   "purl": "pkg:pypi/annotated-doc@0.0.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "annotated-types",
+   "version": "0.8.0",
+   "scope": "required",
+   "purl": "pkg:pypi/annotated-types@0.8.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "anyio",
+   "version": "4.16.0",
+   "scope": "required",
+   "purl": "pkg:pypi/anyio@4.16.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "asn1crypto",
+   "version": "1.5.1",
+   "scope": "required",
+   "purl": "pkg:pypi/asn1crypto@1.5.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "certifi",
+   "version": "2026.10.23",
+   "scope": "required",
+   "purl": "pkg:pypi/certifi@2026.10.23",
+   "licenses": [
+    {
+     "expression": "MPL-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "review"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "cffi",
+   "version": "2.1.1",
+   "scope": "required",
+   "purl": "pkg:pypi/cffi@2.1.1",
+   "licenses": [
+    {
+     "expression": "MIT-0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "click",
+   "version": "8.5.0",
+   "scope": "required",
+   "purl": "pkg:pypi/click@8.5.0",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "cryptography",
+   "version": "43.0.3",
+   "scope": "required",
+   "purl": "pkg:pypi/cryptography@43.0.3",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "fastapi",
+   "version": "0.162.0",
+   "scope": "required",
+   "purl": "pkg:pypi/fastapi@0.162.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "h11",
+   "version": "0.16.0",
+   "scope": "required",
+   "purl": "pkg:pypi/h11@0.16.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "httpcore",
+   "version": "1.0.9",
+   "scope": "required",
+   "purl": "pkg:pypi/httpcore@1.0.9",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "httpx",
+   "version": "0.28.1",
+   "scope": "required",
+   "purl": "pkg:pypi/httpx@0.28.1",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "idna",
+   "version": "3.20",
+   "scope": "required",
+   "purl": "pkg:pypi/idna@3.20",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "iniconfig",
+   "version": "2.3.1",
+   "scope": "optional",
+   "purl": "pkg:pypi/iniconfig@2.3.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "numpy",
+   "version": "2.5.4",
+   "scope": "required",
+   "purl": "pkg:pypi/numpy@2.5.4",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "opentelemetry-api",
+   "version": "1.45.2",
+   "scope": "required",
+   "purl": "pkg:pypi/opentelemetry-api@1.45.2",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "packaging",
+   "version": "26.3",
+   "scope": "optional",
+   "purl": "pkg:pypi/packaging@26.3",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR BSD-2-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pg8000",
+   "version": "1.31.6",
+   "scope": "required",
+   "purl": "pkg:pypi/pg8000@1.31.6",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pluggy",
+   "version": "1.7.0",
+   "scope": "optional",
+   "purl": "pkg:pypi/pluggy@1.7.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pycparser",
+   "version": "3.12",
+   "scope": "required",
+   "purl": "pkg:pypi/pycparser@3.12",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pydantic",
+   "version": "2.14.2",
+   "scope": "required",
+   "purl": "pkg:pypi/pydantic@2.14.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pydantic_core",
+   "version": "2.50.2",
+   "scope": "required",
+   "purl": "pkg:pypi/pydantic_core@2.50.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "Pygments",
+   "version": "2.21.0",
+   "scope": "optional",
+   "purl": "pkg:pypi/Pygments@2.21.0",
+   "licenses": [
+    {
+     "expression": "BSD-2-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pytest",
+   "version": "9.2.0",
+   "scope": "optional",
+   "purl": "pkg:pypi/pytest@9.2.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "python-dateutil",
+   "version": "4.0.0",
+   "scope": "required",
+   "purl": "pkg:pypi/python-dateutil@4.0.0",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "redis",
+   "version": "8.1.0",
+   "scope": "required",
+   "purl": "pkg:pypi/redis@8.1.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "scipy",
+   "version": "1.18.1",
+   "scope": "required",
+   "purl": "pkg:pypi/scipy@1.18.1",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "scramp",
+   "version": "1.5.0",
+   "scope": "required",
+   "purl": "pkg:pypi/scramp@1.5.0",
+   "licenses": [
+    {
+     "expression": "MIT-0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "starlette",
+   "version": "1.10.0",
+   "scope": "required",
+   "purl": "pkg:pypi/starlette@1.10.0",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tomli",
+   "version": "2.5.0",
+   "scope": "required",
+   "purl": "pkg:pypi/tomli@2.5.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "typing_extensions",
+   "version": "4.16.0",
+   "scope": "required",
+   "purl": "pkg:pypi/typing_extensions@4.16.0",
+   "licenses": [
+    {
+     "expression": "PSF-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "typing-inspection",
+   "version": "0.4.4",
+   "scope": "required",
+   "purl": "pkg:pypi/typing-inspection@0.4.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tzdata",
+   "version": "2026.6",
+   "scope": "required",
+   "purl": "pkg:pypi/tzdata@2026.6",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "uvicorn",
+   "version": "0.54.0",
+   "scope": "required",
+   "purl": "pkg:pypi/uvicorn@0.54.0",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "pypi"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "Go standard library only (go.mod has no requirements)",
+   "version": "1.24",
+   "scope": "required",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "go"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "OpenJDK 21 runtime (no third-party jars; the build uses javac only)",
+   "version": "21",
+   "scope": "required",
+   "licenses": [
+    {
+     "expression": "GPL-2.0 WITH Classpath-exception-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "java"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "container",
+   "name": "postgres (container image)",
+   "version": "16",
+   "scope": "required",
+   "licenses": [
+    {
+     "expression": "PostgreSQL"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "container"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "container",
+   "name": "redis (container image, pin to 7.2.x: later releases changed licence)",
+   "version": "7.2",
+   "scope": "required",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "container"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "container",
+   "name": "eclipse-temurin (container base image)",
+   "version": "21",
+   "scope": "required",
+   "licenses": [
+    {
+     "expression": "GPL-2.0 WITH Classpath-exception-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "container"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "container",
+   "name": "distroless static/cc (container base image)",
+   "version": "debian12",
+   "scope": "required",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "container"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "container",
+   "name": "python (container base image)",
+   "version": "3.13-slim",
+   "scope": "required",
+   "licenses": [
+    {
+     "expression": "PSF-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "container"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "container",
+   "name": "rust (build image)",
+   "version": "1.82",
+   "scope": "required",
+   "licenses": [
+    {
+     "expression": "MIT OR Apache-2.0"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "container"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  },
+  {
+   "type": "container",
+   "name": "golang (build image)",
+   "version": "1.23",
+   "scope": "required",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "properties": [
+    {
+     "name": "gs:ecosystem",
+     "value": "container"
+    },
+    {
+     "name": "gs:policy",
+     "value": "ok"
+    }
+   ]
+  }
+ ]
+}

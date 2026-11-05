@@ -1,0 +1,261 @@
+{
+ "started": "2026-11-05T09:00:34+00:00",
+ "host": "vm",
+ "cpus": 2,
+ "suites": [
+  {
+   "group": "unit",
+   "name": "java-core",
+   "passed": "197",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 8.7,
+   "ok": true
+  },
+  {
+   "group": "unit",
+   "name": "rust-cim-pds",
+   "passed": "44",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 19.1,
+   "ok": true
+  },
+  {
+   "group": "unit",
+   "name": "python-ems",
+   "passed": "125",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 366.2,
+   "ok": true
+  },
+  {
+   "group": "unit",
+   "name": "python-historian",
+   "passed": "22",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 2.5,
+   "ok": true
+  },
+  {
+   "group": "unit",
+   "name": "ui-unit",
+   "passed": "23",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 1.3,
+   "ok": true
+  },
+  {
+   "group": "unit",
+   "name": "ui-typecheck",
+   "passed": "1",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 7.5,
+   "ok": true
+  },
+  {
+   "group": "unit",
+   "name": "soak-selftest",
+   "passed": "all",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 0.2,
+   "ok": true
+  },
+  {
+   "group": "unit",
+   "name": "sast",
+   "passed": "no",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 44.5,
+   "ok": true
+  },
+  {
+   "group": "unit",
+   "name": "sbom",
+   "passed": "278",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 1.1,
+   "ok": true
+  },
+  {
+   "group": "plain",
+   "name": "e2e_models",
+   "passed": "57",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 4.6,
+   "ok": true
+  },
+  {
+   "group": "plain",
+   "name": "e2e_interop",
+   "passed": "44",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 4.7,
+   "ok": true
+  },
+  {
+   "group": "plain",
+   "name": "e2e_distributed",
+   "passed": "11",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 25.2,
+   "ok": true
+  },
+  {
+   "group": "plain",
+   "name": "dast",
+   "passed": "269",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 22.0,
+   "ok": true
+  },
+  {
+   "group": "plain",
+   "name": "e2e_failover",
+   "passed": "10",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 17.8,
+   "ok": true
+  },
+  {
+   "group": "asym+quorum+mtls",
+   "name": "e2e_asym",
+   "passed": "40",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 1.3,
+   "ok": true
+  },
+  {
+   "group": "asym+quorum+mtls",
+   "name": "e2e_core_asym",
+   "passed": "78",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 120.9,
+   "ok": true
+  },
+  {
+   "group": "asym+quorum",
+   "name": "e2e_quorum",
+   "passed": "22",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 113.3,
+   "ok": true
+  },
+  {
+   "group": "postgres+bus",
+   "name": "e2e_bus",
+   "passed": "14",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 12.4,
+   "ok": true
+  },
+  {
+   "group": "postgres+bus",
+   "name": "ui_e2e_pg",
+   "passed": "69",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 150.6,
+   "ok": true
+  },
+  {
+   "group": "asym+quorum+mtls",
+   "name": "e2e_mtls",
+   "passed": "18",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 12.1,
+   "ok": true
+  },
+  {
+   "group": "unit",
+   "name": "usability-selftest",
+   "passed": "all",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 0.0,
+   "ok": true
+  },
+  {
+   "group": "unit",
+   "name": "go-fep",
+   "passed": "9 packages",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 23.7,
+   "ok": true
+  },
+  {
+   "group": "plain",
+   "name": "e2e_core",
+   "passed": "78",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 120.6,
+   "ok": true
+  },
+  {
+   "group": "plain",
+   "name": "e2e_comms",
+   "passed": "15",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 29.6,
+   "ok": true
+  },
+  {
+   "group": "secure-links",
+   "name": "e2e_secure",
+   "passed": "21",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 278.0,
+   "ok": true
+  },
+  {
+   "group": "opcua",
+   "name": "e2e_opcua",
+   "passed": "16",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 3.9,
+   "ok": true
+  },
+  {
+   "group": "pmu",
+   "name": "e2e_pmu",
+   "passed": "13",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 2.1,
+   "ok": true
+  },
+  {
+   "group": "plain",
+   "name": "ui_e2e",
+   "passed": "69",
+   "failed": 0,
+   "exit": 0,
+   "seconds": 124.0,
+   "ok": true
+  }
+ ],
+ "finished": "2026-11-05T10:17:10+00:00",
+ "all_ok": true
+}

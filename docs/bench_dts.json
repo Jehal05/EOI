@@ -1,0 +1,18 @@
+[
+ {
+  "buses": 118,
+  "library_s": 0.01,
+  "session_create_s": 0.01,
+  "step_60s_ms": 0.0,
+  "action_ms": 13.0,
+  "final_score": 25.0
+ },
+ {
+  "buses": 1062,
+  "library_s": 0.03,
+  "session_create_s": 0.03,
+  "step_60s_ms": 0.0,
+  "action_ms": 28.0,
+  "final_score": 25.0
+ }
+]

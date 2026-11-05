@@ -1,0 +1,34 @@
+[
+ {
+  "buses": 118,
+  "branches": 186,
+  "status": "improved",
+  "critical_before": 56,
+  "critical_after": 25,
+  "excess_before_pct": 8251,
+  "excess_after_pct": 424,
+  "worst_before_pct": 470,
+  "worst_after_pct": 203,
+  "redispatch_mw": 1514,
+  "shed_mw": 16.6,
+  "cost_change_per_h": 12030,
+  "switching_actions": 0,
+  "wall_s": 20.0
+ },
+ {
+  "buses": 1062,
+  "branches": 1698,
+  "status": "not_improved",
+  "critical_before": 513,
+  "critical_after": 513,
+  "excess_before_pct": 57167,
+  "excess_after_pct": 57167,
+  "worst_before_pct": 426,
+  "worst_after_pct": 426,
+  "redispatch_mw": 0,
+  "shed_mw": 0,
+  "cost_change_per_h": 0,
+  "switching_actions": 0,
+  "wall_s": 139.4
+ }
+]

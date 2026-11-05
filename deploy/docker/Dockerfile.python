@@ -1,0 +1,10 @@
+# ems-analytics and historian. ARG SVC picks the service directory; the module and port are given by the command.
+FROM python:3.13-slim
+ARG SVC=ems-analytics
+RUN useradd -r -u 10001 gs
+WORKDIR /app
+COPY services/${SVC}/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY services/${SVC} .
+COPY data /data
+USER 10001

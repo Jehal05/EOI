@@ -1,0 +1,76 @@
+{
+ "host": {
+  "cpus": 2,
+  "machine": "x86_64"
+ },
+ "rows": [
+  {
+   "buses": 118,
+   "branches": 186,
+   "pf_flatstart_ms": 10.435654000502836,
+   "pf_flatstart_converged": true,
+   "pf_ms": 1.2855690001742914,
+   "pf_converged": true,
+   "pf_iters": 0,
+   "measurements": 1098,
+   "se_ms": 36.587563000466616,
+   "se_converged": true,
+   "se_observable": true,
+   "se_rms_vm_err": 0.00045149783796181,
+   "n1_case_ms_mean": 6.433382174986946,
+   "n1_case_ms_p95": 8.627892550111936,
+   "n1_full_screen_s_extrapolated_1core": 1.1966090845475719
+  },
+  {
+   "buses": 1062,
+   "branches": 1698,
+   "pf_flatstart_ms": 21.62129200041818,
+   "pf_flatstart_converged": true,
+   "pf_ms": 10.122226000021328,
+   "pf_converged": true,
+   "pf_iters": 2,
+   "measurements": 9978,
+   "se_ms": 476.8275440001162,
+   "se_converged": true,
+   "se_observable": true,
+   "se_rms_vm_err": 0.00046071695227294654,
+   "n1_case_ms_mean": 13.755510649934877,
+   "n1_case_ms_p95": 17.48451354947065,
+   "n1_full_screen_s_extrapolated_1core": 23.35685708358942
+  },
+  {
+   "buses": 5074,
+   "branches": 8124,
+   "pf_flatstart_ms": 76.95168899954297,
+   "pf_flatstart_converged": true,
+   "pf_ms": 44.376241999998456,
+   "pf_converged": true,
+   "pf_iters": 3,
+   "measurements": 47718,
+   "se_ms": 306.19071499950223,
+   "se_converged": true,
+   "se_observable": true,
+   "se_rms_vm_err": 0.0004828896422695617,
+   "n1_case_ms_mean": 43.90732377498807,
+   "n1_case_ms_p95": 53.515340650255894,
+   "n1_full_screen_s_extrapolated_1core": 356.7030983480031
+  },
+  {
+   "buses": 10030,
+   "branches": 16062,
+   "pf_flatstart_ms": 636.8411209996339,
+   "pf_flatstart_converged": false,
+   "pf_ms": 85.2812980001545,
+   "pf_converged": true,
+   "pf_iters": 3,
+   "measurements": 94338,
+   "se_ms": 654.4909860003827,
+   "se_converged": true,
+   "se_observable": true,
+   "se_rms_vm_err": 0.0004604101983841075,
+   "n1_case_ms_mean": 87.34607174994835,
+   "n1_case_ms_p95": 102.80797584991888,
+   "n1_full_screen_s_extrapolated_1core": 1402.9526044476704
+  }
+ ]
+}

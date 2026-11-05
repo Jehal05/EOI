@@ -1,0 +1,30 @@
+{
+ "study_118_s": [
+  3.23,
+  4.55,
+  3.06
+ ],
+ "study_118_verdict": "restricted",
+ "plan_118_s": [
+  0.14,
+  0.12,
+  0.11
+ ],
+ "plan_118_steps": 6,
+ "plan_118_status": "ok",
+ "schedule_118_s": [
+  9.44
+ ],
+ "buses_118": {
+  "pf_s": 0.01,
+  "n1_s": 1.6,
+  "study_estimate_s": 3.2,
+  "estimate": true
+ },
+ "buses_1062": {
+  "pf_s": 0.03,
+  "n1_s": 31.9,
+  "study_estimate_s": 63.9,
+  "estimate": true
+ }
+}

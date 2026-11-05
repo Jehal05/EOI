@@ -1,0 +1,148 @@
+[
+ {
+  "buses": 118,
+  "loads": 99,
+  "load_mw": 4242,
+  "ufls_wall_s": 0.06,
+  "scenarios": [
+   {
+    "name": "Loss of the largest unit",
+    "lost_mw": 607.0,
+    "lost_pct": 13.9,
+    "nadir_no": 49.467,
+    "nadir_ufls": 49.467,
+    "final_ufls": 49.467,
+    "shed_pct": 0.0,
+    "stages_fired": 0,
+    "passes": false
+   },
+   {
+    "name": "Loss of the two largest units",
+    "lost_mw": 1123.4,
+    "lost_pct": 25.7,
+    "nadir_no": 47.241,
+    "nadir_ufls": 48.97,
+    "final_ufls": 49.245,
+    "shed_pct": 12.0,
+    "stages_fired": 2,
+    "passes": false
+   },
+   {
+    "name": "Loss of 35 % of generation",
+    "lost_mw": 1600.4,
+    "lost_pct": 36.6,
+    "nadir_no": 45.023,
+    "nadir_ufls": 48.598,
+    "final_ufls": 49.876,
+    "shed_pct": 30.0,
+    "stages_fired": 4,
+    "passes": false
+   }
+  ],
+  "deficit_mw": 127,
+  "roster": {
+   "rotating": {
+    "wall_s": 0.42,
+    "jain": 0.422,
+    "loads_ever": 45,
+    "eligible": 71,
+    "max_ens_mwh": 113.0,
+    "periods_with_new_overloads": 8,
+    "ac_retries": 39
+   },
+   "static": {
+    "wall_s": 0.08,
+    "jain": 0.027,
+    "loads_ever": 2,
+    "eligible": 71,
+    "max_ens_mwh": 936.0,
+    "periods_with_new_overloads": 0,
+    "ac_retries": 36
+   }
+  }
+ },
+ {
+  "buses": 1062,
+  "loads": 891,
+  "load_mw": 38178,
+  "ufls_wall_s": 0.1,
+  "scenarios": [
+   {
+    "name": "Loss of the largest unit",
+    "lost_mw": 607.0,
+    "lost_pct": 1.5,
+    "nadir_no": 49.949,
+    "nadir_ufls": 49.949,
+    "final_ufls": 49.956,
+    "shed_pct": 0.0,
+    "stages_fired": 0,
+    "passes": true
+   },
+   {
+    "name": "Loss of the two largest units",
+    "lost_mw": 1214.0,
+    "lost_pct": 3.1,
+    "nadir_no": 49.925,
+    "nadir_ufls": 49.925,
+    "final_ufls": 49.94,
+    "shed_pct": 0.0,
+    "stages_fired": 0,
+    "passes": true
+   },
+   {
+    "name": "Loss of 15 % of generation",
+    "lost_mw": 5979.4,
+    "lost_pct": 15.2,
+    "nadir_no": 49.232,
+    "nadir_ufls": 49.232,
+    "final_ufls": 49.232,
+    "shed_pct": 0.0,
+    "stages_fired": 0,
+    "passes": false
+   },
+   {
+    "name": "Loss of 25 % of generation",
+    "lost_mw": 10110.6,
+    "lost_pct": 25.7,
+    "nadir_no": 47.241,
+    "nadir_ufls": 48.97,
+    "final_ufls": 49.245,
+    "shed_pct": 12.0,
+    "stages_fired": 2,
+    "passes": false
+   },
+   {
+    "name": "Loss of 35 % of generation",
+    "lost_mw": 13926.6,
+    "lost_pct": 35.3,
+    "nadir_no": 45.279,
+    "nadir_ufls": 48.754,
+    "final_ufls": 48.761,
+    "shed_pct": 20.0,
+    "stages_fired": 3,
+    "passes": false
+   }
+  ],
+  "deficit_mw": 1145,
+  "roster": {
+   "rotating": {
+    "wall_s": 1.48,
+    "jain": 0.298,
+    "loads_ever": 338,
+    "eligible": 662,
+    "max_ens_mwh": 277.0,
+    "periods_with_new_overloads": 12,
+    "ac_retries": 48
+   },
+   "static": {
+    "wall_s": 0.15,
+    "jain": 0.01,
+    "loads_ever": 7,
+    "eligible": 662,
+    "max_ens_mwh": 2208.0,
+    "periods_with_new_overloads": 12,
+    "ac_retries": 48
+   }
+  }
+ }
+]

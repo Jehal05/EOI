@@ -1,0 +1,16 @@
+package iec101
+
+import (
+	"bytes"
+	"testing"
+)
+
+func FuzzRead(f *testing.F) {
+	f.Add([]byte{0x68, 0x07, 0x07, 0x68, 0x73, 0x01, 0x0D, 0x01, 0x03, 0x01, 0x01, 0x7F, 0x16})
+	f.Add([]byte{0x10, 0x40, 0x01, 0x41, 0x16})
+	f.Fuzz(func(t *testing.T, b []byte) {
+		for _, sz := range []int{1, 2} {
+			_, _ = Read(bytes.NewReader(b), sz)
+		}
+	})
+}

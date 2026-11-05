@@ -1,0 +1,54 @@
+[
+ {
+  "buses": 118,
+  "branches": 186,
+  "vsa_s": 4.6,
+  "vsa_margin_pct": 114.4,
+  "vsa_worst_n1_pct": 26.4,
+  "vsa_weakest": "Busbar 10#0",
+  "vsa_pf_steps": 26,
+  "tsa_setup_s": 0.02,
+  "units": 54,
+  "tsa_faults": 118,
+  "tsa_unstable": 0,
+  "tsa_s": 3.5,
+  "tsa_s_per_fault": 0.03,
+  "tsa_min_cct_s": 0.2683,
+  "tsa_max_angle_deg": 67.0,
+  "ssa_s": 0.02,
+  "ssa_modes": 53,
+  "ssa_min_damping": 0.0094,
+  "ssa_poor": 53,
+  "ssa_freq_hz": [
+   0.4764,
+   1.7021
+  ],
+  "ssa_status": "poorly_damped"
+ },
+ {
+  "buses": 1062,
+  "branches": 1698,
+  "vsa_s": 10.8,
+  "vsa_margin_pct": 75.6,
+  "vsa_worst_n1_pct": 51.4,
+  "vsa_weakest": "Busbar 45#0",
+  "vsa_pf_steps": 17,
+  "tsa_setup_s": 0.11,
+  "units": 486,
+  "tsa_faults": 12,
+  "tsa_unstable": 0,
+  "tsa_s": 11.3,
+  "tsa_s_per_fault": 0.94,
+  "tsa_min_cct_s": 0.2781,
+  "tsa_max_angle_deg": 57.6,
+  "ssa_s": 0.91,
+  "ssa_modes": 485,
+  "ssa_min_damping": 0.0093,
+  "ssa_poor": 485,
+  "ssa_freq_hz": [
+   0.4093,
+   1.7031
+  ],
+  "ssa_status": "poorly_damped"
+ }
+]

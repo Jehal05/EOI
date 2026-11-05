@@ -1,0 +1,22 @@
+# Images are built from deploy/docker/*; push them to your own registry and set the names here.
+image:
+  registry: registry.example.invalid/gridsovereign     # placeholder: must be replaced
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
+core:
+  replicas: 3                  # odd numbers >= 3 give quorum election; 1 = standalone, 2 = legacy pair (can split brain)
+  storage: 5Gi
+  resources: { requests: { cpu: "1", memory: 1Gi }, limits: { memory: 2Gi } }
+secrets:
+  # one Secret holding trust.json, audit.key, hist_dsn and one <kid>.tokkey per service (create it with the pki tool; never in values)
+  existingSecret: gridsovereign-secrets
+postgres:
+  external: true               # use a managed/HA Postgres; the chart does not run a database
+  dsnKey: hist_dsn             # key in the secret above
+redis:
+  url: redis://redis-master:6379   # external Redis (or Valkey); no TLS or auth in the core's publisher, keep it inside the namespace
+networkPolicy:
+  enabled: true
+ingress:
+  enabled: false
+  host: gs.example.invalid
